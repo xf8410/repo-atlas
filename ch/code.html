@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🛠️ 代码维护语义 · 花落仓库语义手册</title>
+<style>
+:root{--bg:#0f1419;--card:#1a2129;--card2:#212a35;--line:#2d3743;--txt:#e6e9ed;--sub:#9aa7b4;
+--acc:#5eb1ff;--acc2:#ffd166;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--hold:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;font-size:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+h1{font-size:1.9em;margin:12px 0 6px}h2{font-size:1.35em;margin:34px 0 12px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:1.12em;margin:22px 0 8px;color:var(--acc2)}
+p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
+.nav{position:sticky;top:0;z-index:9;background:rgba(15,20,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
+.nav b{color:var(--acc2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.repo-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .12s}
+.repo-card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.repo-card .name{font-weight:700;font-size:1.05em}
+.repo-card .desc{color:var(--sub);font-size:.9em;margin:6px 0}
+.tag{display:inline-block;padding:1px 9px;border-radius:20px;font-size:.78em;margin-right:5px;border:1px solid var(--line);color:var(--sub)}
+.tag.hot{color:var(--acc2);border-color:var(--acc2)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--card2)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.hold{color:var(--hold)}
+.callout{border-left:4px solid var(--warn);background:rgba(251,191,36,.07);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.danger{border-color:var(--bad);background:rgba(248,113,113,.07)}
+.callout.info{border-color:var(--acc);background:rgba(94,177,255,.07)}
+.big-num{font-size:2em;font-weight:800;color:var(--acc2)}
+footer{margin-top:60px;color:var(--sub);font-size:.85em;border-top:1px solid var(--line);padding-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.9em}
+br-table{display:block;overflow-x:auto}
+@media print{.nav{position:static}body{background:#fff;color:#000}}
+</style></head><body>
+<div class="nav"><b>语义手册</b> <a href="../index.html">🏠 总入口</a> <a href="ch/player.html">👤 玩家语义</a> <a href="ch/game.html">🎮 游戏语义</a> <a href="ch/code.html">🛠️ 代码维护语义</a> <a href="ch/fix.html">🩹 修复语义</a> <a href="ch/compat.html">🔗 兼容性语义</a> <a href="ch/bugfix.html">🐛 修 Bug 维护语义</a> <a href="ch/pr.html">📬 PR 语义</a> <a href="ch/glossary.html">📖 术语白话对照表</a> <a href="../index.html#repos">📦 仓库地图</a></div>
+<div class="wrap"><p><a href="../index.html">← 回总入口</a></p>
+<h1>🛠️ 代码维护语义</h1>
+<p style="color:var(--sub)">仓库地图、分支规矩、改代码的动线。零经验也能照着做。</p>
+
+<h2>30 秒看懂仓库地图</h2>
+<div class="card">
+<p>38 个仓库分成五片：<b>赛马娘 AI 核心</b>（修的就是这条线）、<b>机制知识库</b>、<b>Hachimi 插件层</b>（从游戏内存读数据）、<b>手机应用</b>、<b>最佳球会</b>。详细卡片在 <a href="../index.html#repos">总入口</a>。</p>
+<p>最重要的一句：<b>umaai-rs 是主仓，umaai-rs-fanfix 是本次修复实验仓</b>，本手册就住在 fanfix 里。</p>
+</div>
+
+<h2>分支命名规矩</h2>
+<table>
+<tr><th>分支名</th><th>意思</th></tr>
+<tr><td><b>main / master</b></td><td>主干 = 这个仓库的正式版本。main 和 master 意思一样，只是仓库建的时期不同</td></tr>
+<tr><td><b>workbench/xxx</b></td><td>工作台实验分支。一个分支一件事，名字里写着干嘛的（比如 workbench/slack-fix-v2 = 溢出松弛修复第二版）</td></tr>
+<tr><td><b>backup/xxx</b></td><td>备份快照，别在上面改东西</td></tr>
+<tr><td><b>release/xxx、publish/xxx</b></td><td>发布用分支</td></tr>
+</table>
+
+<h2>改代码的标准动线（补丁流）</h2>
+<div class="card">
+<ol>
+<li>从主干拉一个 workbench 分支</li>
+<li>改动写成 <b>补丁文件</b>（patches/000X-名字.patch），<b>默认不生效</b>——想试的时候用 token 打开</li>
+<li>推上去，CI（自动质检机器人）自动跑编译+测试</li>
+<li>bench（A/B 测试）里加一个"臂"，和基准同种子对跑</li>
+<li>出判词：转正 / 中性 / 判死 / 留观</li>
+</ol>
+<p><b>为什么这样：</b>主干永远干净，每个改动自带开关和证据，随时可退。这叫"补丁即证据单元"。</p>
+</div>
+
+<h2>CI 是什么，红了怎么办</h2>
+<div class="card">
+<p>CI = GitHub Actions 自动质检。每次推代码它自动：编译 → 跑测试 → 跑 bench。<b>绿=过，红=有问题。</b></p>
+<p><span class="bad">铁律：推送后必查 CI，红了必须修到绿再交付。</span></p>
+<p>已知例外：libtests 有 4 个上游基线红（上游本来就红，我们不背不藏，写在明处）。</p>
+</div>
+
+<h2>动手前检查清单</h2>
+<ul>
+<li>☐ 这个仓库是赛马娘相关仓库吗？是的话，<b>先问主人要不要动</b>（有许可规则）</li>
+<li>☐ 改动是不是默认关闭、不影响现有行为？</li>
+<li>☐ 有没有引入魔法数字（没出处的裸数字）？有就消灭或标来源</li>
+<li>☐ 提交信息写清楚改了什么、为什么</li>
+</ul>
+<footer>花落仓库语义手册 · 生成于 2026-09-13 · 全部页面互相跳转，直接存放在 GitHub 仓库内，免积分查看。<br>
+维护方法：改 <code>semantic_atlas/gen_atlas.py</code> 里的文字，重新运行生成，推送到 repo-atlas 仓库。</footer>
+</div></body></html>

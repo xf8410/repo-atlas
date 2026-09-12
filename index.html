@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>总入口 · 花落仓库语义手册</title>
+<style>
+:root{--bg:#0f1419;--card:#1a2129;--card2:#212a35;--line:#2d3743;--txt:#e6e9ed;--sub:#9aa7b4;
+--acc:#5eb1ff;--acc2:#ffd166;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--hold:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;font-size:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+h1{font-size:1.9em;margin:12px 0 6px}h2{font-size:1.35em;margin:34px 0 12px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:1.12em;margin:22px 0 8px;color:var(--acc2)}
+p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
+.nav{position:sticky;top:0;z-index:9;background:rgba(15,20,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
+.nav b{color:var(--acc2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.repo-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .12s}
+.repo-card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.repo-card .name{font-weight:700;font-size:1.05em}
+.repo-card .desc{color:var(--sub);font-size:.9em;margin:6px 0}
+.tag{display:inline-block;padding:1px 9px;border-radius:20px;font-size:.78em;margin-right:5px;border:1px solid var(--line);color:var(--sub)}
+.tag.hot{color:var(--acc2);border-color:var(--acc2)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--card2)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.hold{color:var(--hold)}
+.callout{border-left:4px solid var(--warn);background:rgba(251,191,36,.07);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.danger{border-color:var(--bad);background:rgba(248,113,113,.07)}
+.callout.info{border-color:var(--acc);background:rgba(94,177,255,.07)}
+.big-num{font-size:2em;font-weight:800;color:var(--acc2)}
+footer{margin-top:60px;color:var(--sub);font-size:.85em;border-top:1px solid var(--line);padding-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.9em}
+br-table{display:block;overflow-x:auto}
+@media print{.nav{position:static}body{background:#fff;color:#000}}
+</style></head><body>
+<div class="nav"><b>语义手册</b> <a href="index.html"">🏠 总入口</a> <a href="ch/player.html">👤 玩家语义</a> <a href="ch/game.html">🎮 游戏语义</a> <a href="ch/code.html">🛠️ 代码维护语义</a> <a href="ch/fix.html">🩹 修复语义</a> <a href="ch/compat.html">🔗 兼容性语义</a> <a href="ch/bugfix.html">🐛 修 Bug 维护语义</a> <a href="ch/pr.html">📬 PR 语义</a> <a href="ch/glossary.html">📖 术语白话对照表</a> <a href="index.html"#repos">📦 仓库地图</a></div>
+<div class="wrap">
+<h1>🏠 花落仓库语义手册</h1>
+<p style="color:var(--sub)">这是全部 38 个仓库、约 600 个分支的大白话说明书。<b>不写术语，只讲语义</b>——第一次玩赛马娘、第一次看代码的人也能读懂。</p>
+
+<div class="callout info"><b>怎么用这本手册：</b>① 先读下面前两个语义章节（玩家/游戏），搞懂游戏在玩什么；② 要改代码就读「代码维护语义」；③ 修 bug / 提 PR 前先读对应章节——里面记着踩过的坑（包括 2798 个文件丢失的教训）。每个仓库点卡片进去，能看到每个分支是干嘛的。</div>
+
+<div class="chips">
+<div class="chip">📦 <span class="big-num">38</span> 个仓库</div>
+<div class="chip">🌿 <span class="big-num">534</span> 个分支</div>
+<div class="chip">📅 盘点日期 2026-09-13</div>
+</div>
+
+<h2>📚 先读语义（按顺序）</h2>
+<div class="grid">
+<div class="repo-card"><div class="name"><a href="ch/player.html">👤 玩家语义</a></div><div class="desc">第一次玩这个游戏的人，先从这里开始</div></div><div class="repo-card"><div class="name"><a href="ch/game.html">🎮 游戏语义</a></div><div class="desc">拉面杯这个剧本到底在玩什么</div></div><div class="repo-card"><div class="name"><a href="ch/code.html">🛠️ 代码维护语义</a></div><div class="desc">仓库地图 + 分支规矩 + 怎么改代码</div></div><div class="repo-card"><div class="name"><a href="ch/fix.html">🩹 修复语义</a></div><div class="desc">补丁、A/B 测试、判词、转正——修东西的黑话全解</div></div><div class="repo-card"><div class="name"><a href="ch/compat.html">🔗 兼容性语义</a></div><div class="desc">怎么保证新改动不弄坏旧东西</div></div><div class="repo-card"><div class="name"><a href="ch/bugfix.html">🐛 修 Bug 维护语义</a></div><div class="desc">复现、种子、世界线——抓虫子的纪律</div></div><div class="repo-card"><div class="name"><a href="ch/pr.html">📬 PR 语义</a></div><div class="desc">提交代码前必须懂的规矩（含世界线教训）</div></div><div class="repo-card"><div class="name"><a href="ch/glossary.html">📖 术语白话对照表</a></div><div class="desc">看到看不懂的词，来这里查</div></div>
+</div>
+
+<h2 id="repos">📦 仓库地图</h2>
+<h2>🐴 赛马娘 AI 核心（这次修的就是这条线）</h2><div class="grid"><div class="repo-card"><div class="name"><a href="repos/umaai-rs.html">umaai-rs</a></div>
+<div class="desc">主仓库（Rust 重写的育成 AI）。所有实验的老家，上游是 xulai1001 的原版。MCTS 搜索、评分、策略都在这里。</div>
+<span class="tag">37 个分支</span><span class="tag">33MB</span><span class="tag"><a href="https://github.com/xf8410/umaai-rs" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/umaai-rs-fanfix.html">umaai-rs-fanfix</a></div>
+<div class="desc">本次修复实验仓。『拉面杯溢出/松弛修复』的主战场：补丁（patches/）、九臂 A/B 测试（bench）、判词（docs/）都在这。本手册就住在这个仓库里。</div>
+<span class="tag hot">7 个分支</span><span class="tag">2MB</span><span class="tag"><a href="https://github.com/xf8410/umaai-rs-fanfix" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/umaai-rs-fanskip.html">umaai-rs-fanskip</a></div>
+<div class="desc">粉丝数跳过版：真机 AI 可以配置跳过『粉丝数达标』判定。注意：主人最新判断是粉丝数可能根本不用管（每个马娘都有必打的育成目标赛），待实测。</div>
+<span class="tag">1 个分支</span><span class="tag">33MB</span><span class="tag"><a href="https://github.com/xf8410/umaai-rs-fanskip" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-ramen-nn-lab.html">uma-ramen-nn-lab</a></div>
+<div class="desc">神经网络实验室（EXP-001~009）：MCTS+神经网络决策器迭代的主场。EXP-009b 冠军 66734.8 分（注意：未经跨世界线复验）。</div>
+<span class="tag hot">49 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-ramen-nn-lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-ramen-nn-lab-exp010.html">uma-ramen-nn-lab-exp010</a></div>
+<div class="desc">EXP-010 自蒸馏：让神经网络当搜索引擎的评估器。跑完归档回主仓。</div>
+<span class="tag">11 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-ramen-nn-lab-exp010" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-ramen-teacher-lab.html">uma-ramen-teacher-lab</a></div>
+<div class="desc">教师实验仓（EXP-013 起）：先修好『教师』再蒸馏给学生。这是论文（DAgger）指出的正路。</div>
+<span class="tag">15 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-ramen-teacher-lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-train.html">uma-train</a></div>
+<div class="desc">AI 训练框架：MCTS+神经网络，剧本机制隔离，拉面杯模拟器已按 MDB/实机截图校准。</div>
+<span class="tag">2 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-train" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-data.html">uma-data</a></div>
+<div class="desc">训练数据集仓库：MCTS 策略+比赛模拟器价值评估数据。里面有完整 master.mdb（41MB 游戏数据表）和逆向资料。</div>
+<span class="tag">2 个分支</span><span class="tag">154MB</span><span class="tag"><a href="https://github.com/xf8410/uma-data" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div></div><h2>📖 机制与知识库</h2><div class="grid"><div class="repo-card"><div class="name"><a href="repos/umamusume-scenario-mechanics.html">umamusume-scenario-mechanics</a></div>
+<div class="desc">赛马娘全育成剧本的机制说明书：协议接口、响应结构、MDB 与运行时证据。泳装青云天空的公式闭环交接书就在这里的分支里。</div>
+<span class="tag">71 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/umamusume-scenario-mechanics" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/umamusume-mechanics-archive.html">umamusume-mechanics-archive</a></div>
+<div class="desc">机制私人规范化归档：审计账本、迁移记录。『2798 个悬空 blob 没提交』的教训就记在这。</div>
+<span class="tag">6 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/umamusume-mechanics-archive" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-wiki.html">uma-wiki</a></div>
+<div class="desc">赛马娘育成 Wiki：机制条目与攻略整理，带 CI 校验。</div>
+<span class="tag">3 个分支</span><span class="tag">110MB</span><span class="tag"><a href="https://github.com/xf8410/uma-wiki" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/ramen-manual.html">ramen-manual</a></div>
+<div class="desc">拉面杯规则手册：玩法机制、流程与规则的中文整理存档。第一次玩拉面杯先看这个。</div>
+<span class="tag">2 个分支</span><span class="tag">2MB</span><span class="tag"><a href="https://github.com/xf8410/ramen-manual" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-kouryaku-tools-mirror.html">uma-kouryaku-tools-mirror</a></div>
+<div class="desc">攻略站全量镜像：140 条赛道的分段/坡道/相位 + 317 场赛事数据。</div>
+<span class="tag">3 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-kouryaku-tools-mirror" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-saidao-shuju.html">uma-saidao-shuju</a></div>
+<div class="desc">赛道数据挖掘：140 赛道静态表、天气马场、技能条件、末脚/焦躁/封堵机制。</div>
+<span class="tag">2 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-saidao-shuju" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-zmyz.html">uma-zmyz</a></div>
+<div class="desc">种马因子数据集：育成继承链路的结构化因子库。</div>
+<span class="tag">2 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-zmyz" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div></div><h2>🔧 Hachimi 框架与插件（注入/观测层）</h2><div class="grid"><div class="repo-card"><div class="name"><a href="repos/hlpatch.html">hlpatch</a></div>
+<div class="desc">育成内存读取插件：基于 Hachimi 框架，从游戏内存实时读数据+HTTP 端点+自动推送。分支最多（52 个），全是各阶段功能开发记录。</div>
+<span class="tag hot">52 个分支</span><span class="tag">63MB</span><span class="tag"><a href="https://github.com/xf8410/hlpatch" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/hlpatch-observation-architecture.html">hlpatch-observation-architecture</a></div>
+<div class="desc">观测数据归档仓：泳装青云天空 465 协议交换会话的索引在这。⚠️ 原始载荷（2798 文件）当年只建了 blob 没提交，已被 GitHub 回收，源文件还在手机上。</div>
+<span class="tag">5 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/hlpatch-observation-architecture" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/Hachimi-Edge.html">Hachimi-Edge</a></div>
+<div class="desc">Hachimi-Edge 上游 fork（kairusds）：资源注入框架增强分支的基座。</div>
+<span class="tag">9 个分支</span><span class="tag">34MB</span><span class="tag"><a href="https://github.com/xf8410/Hachimi-Edge" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/hachimi-edge-gala.html">hachimi-edge-gala</a></div>
+<div class="desc">Hachimi-Edge 的 BestSoccer 改造版：给足球游戏做资源替换注入。</div>
+<span class="tag">2 个分支</span><span class="tag">28MB</span><span class="tag"><a href="https://github.com/xf8410/hachimi-edge-gala" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/hachimi-template-gala.html">hachimi-template-gala</a></div>
+<div class="desc">Hachimi mod 模板：BestSoccer 资源替换 mod 的开发模板。</div>
+<span class="tag">1 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/hachimi-template-gala" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-patcher-gala.html">uma-patcher-gala</a></div>
+<div class="desc">UmaPatcher-Edge 改造版：BestSoccer 的运行时补丁器。</div>
+<span class="tag">1 个分支</span><span class="tag">8MB</span><span class="tag"><a href="https://github.com/xf8410/uma-patcher-gala" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/umahachimios.html">umahachimios</a></div>
+<div class="desc">UmachimiOS 安装器插件：Hachimi 系安装器辅助。</div>
+<span class="tag">2 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/umahachimios" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-landscape.html">uma-landscape</a></div>
+<div class="desc">强制横屏 Zygisk 模块：引擎级朝向 hook。</div>
+<span class="tag">3 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-landscape" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-liuchang-hachimiso.html">uma-liuchang-hachimiso</a></div>
+<div class="desc">卡顿诊断插件：帧率/卡顿采样分析。</div>
+<span class="tag">2 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-liuchang-hachimiso" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/cygames-hachimi-tl-zh-cn.html">cygames-hachimi-tl-zh-cn</a></div>
+<div class="desc">Cygames Hachimi 的中文翻译仓库（含泳装青云剧情翻译）。</div>
+<span class="tag">2 个分支</span><span class="tag">288MB</span><span class="tag"><a href="https://github.com/xf8410/cygames-hachimi-tl-zh-cn" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div></div><h2>📱 手机端应用</h2><div class="grid"><div class="repo-card"><div class="name"><a href="repos/uma-juece.html">uma-juece</a></div>
+<div class="desc">育成辅助浮窗：Android 悬浮窗实时显示属性/训练增益/Buff/AI 决策推荐。</div>
+<span class="tag">2 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-juece" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-juece-ramen.html">uma-juece-ramen</a></div>
+<div class="desc">拉面杯专用决策浮窗：基于 uma-juece，机制对齐上游。34 个分支全是迭代记录。</div>
+<span class="tag">34 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-juece-ramen" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/ramen-scenario-analyzer-mobile.html">ramen-scenario-analyzer-mobile</a></div>
+<div class="desc">拉面杯纯状态分析器（Android）：素材/盛況度/支援卡显示，纯展示不决策。</div>
+<span class="tag">1 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/ramen-scenario-analyzer-mobile" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/ramen-training-advisor.html">ramen-training-advisor</a></div>
+<div class="desc">拉面杯训练决策器：手写逻辑移植+动态权重（Kotlin）。</div>
+<span class="tag">1 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/ramen-training-advisor" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-ai-assistant.html">uma-ai-assistant</a></div>
+<div class="desc">赛马娘 AI 助手：悬浮窗仪表盘+截图 OCR。</div>
+<span class="tag">2 个分支</span><span class="tag">22MB</span><span class="tag"><a href="https://github.com/xf8410/uma-ai-assistant" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-mobile-decision-pipeline.html">uma-mobile-decision-pipeline</a></div>
+<div class="desc">手机端采集流水线：Session 同步+MessagePack 解码+上传决策链路。</div>
+<span class="tag">23 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-mobile-decision-pipeline" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-container.html">uma-container</a></div>
+<div class="desc">Android 容器化运行研究：把游戏嵌进宿主 App 同屏运行（实验性，有账号风险）。</div>
+<span class="tag">1 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/uma-container" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/Agora-Workbench.html">Agora-Workbench</a></div>
+<div class="desc">安卓 AI 工作台：多模型对话/工具调用/GitHub 全套工具。分支最多（125 个），每个分支一个修复或功能。</div>
+<span class="tag">125 个分支</span><span class="tag">32MB</span><span class="tag"><a href="https://github.com/xf8410/Agora-Workbench" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-workbench.html">uma-workbench</a></div>
+<div class="desc">繁体/简体中文 AI 开发研究与数据分析桌面工作台（Android 端）。</div>
+<span class="tag">9 个分支</span><span class="tag">1MB</span><span class="tag"><a href="https://github.com/xf8410/uma-workbench" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div></div><h2>⚽ 最佳球会（BestSoccer）</h2><div class="grid"><div class="repo-card"><div class="name"><a href="repos/football-game.html">football-game</a></div>
+<div class="desc">足球游戏 Godot 4 原型：BestSoccer 玩法原型场。</div>
+<span class="tag">3 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/football-game" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/football-game-kotlin.html">football-game-kotlin</a></div>
+<div class="desc">足球游戏 Kotlin+LibGDX 移植版：玩法验证场，22 个开发分支。</div>
+<span class="tag">22 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/football-game-kotlin" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/duel-links-lite.html">duel-links-lite</a></div>
+<div class="desc">决斗链接离线学习伴侣：卡牌查库/组合检索本地化工具。</div>
+<span class="tag">17 个分支</span><span class="tag">0MB</span><span class="tag"><a href="https://github.com/xf8410/duel-links-lite" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div></div><h2>🗄️ 其他</h2><div class="grid"><div class="repo-card"><div class="name"><a href="repos/ranko-love-archive.html">ranko-love-archive</a></div>
+<div class="desc">ranko.love 站点数据归档：非赛马娘项目的资料收藏仓。</div>
+<span class="tag">2 个分支</span><span class="tag">10MB</span><span class="tag"><a href="https://github.com/xf8410/ranko-love-archive" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div></div>
+
+<h2>⚠️ 三条必须记住的教训</h2>
+<div class="card"><ol>
+<li><b class="bad">上传文件必须提交进分支。</b>泳装青云天空的 2798 个原始抓包文件只传了 blob 没提交，被 GitHub 回收，永久丢失。教训记在「修 Bug 语义」。</li>
+<li><b class="bad">不同口径的分数不能互相比。</b>64271（REC 直跑）、66734.8（EXP-009b 冠军）、72000/76000（神经网络迭代、数据在暮雪流年的电脑）是三把不同的尺子。</li>
+<li><b class="bad">冠军必须换种子复验。</b>EXP-009 把同时期最优结论落地、砍掉不良结论，等于在不同世界线之间挑樱桃——那个"最优"可能只是运气。详见「PR 语义」。</li>
+</ol></div>
+<footer>花落仓库语义手册 · 生成于 2026-09-13 · 全部页面互相跳转，直接存放在 GitHub 仓库内，免积分查看。<br>
+维护方法：改 <code>semantic_atlas/gen_atlas.py</code> 里的文字，重新运行生成，推送到 repo-atlas 仓库。</footer>
+</div></body></html>

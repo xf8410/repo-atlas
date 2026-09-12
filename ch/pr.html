@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📬 PR 语义 · 花落仓库语义手册</title>
+<style>
+:root{--bg:#0f1419;--card:#1a2129;--card2:#212a35;--line:#2d3743;--txt:#e6e9ed;--sub:#9aa7b4;
+--acc:#5eb1ff;--acc2:#ffd166;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--hold:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;font-size:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+h1{font-size:1.9em;margin:12px 0 6px}h2{font-size:1.35em;margin:34px 0 12px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:1.12em;margin:22px 0 8px;color:var(--acc2)}
+p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
+.nav{position:sticky;top:0;z-index:9;background:rgba(15,20,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
+.nav b{color:var(--acc2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.repo-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .12s}
+.repo-card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.repo-card .name{font-weight:700;font-size:1.05em}
+.repo-card .desc{color:var(--sub);font-size:.9em;margin:6px 0}
+.tag{display:inline-block;padding:1px 9px;border-radius:20px;font-size:.78em;margin-right:5px;border:1px solid var(--line);color:var(--sub)}
+.tag.hot{color:var(--acc2);border-color:var(--acc2)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--card2)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.hold{color:var(--hold)}
+.callout{border-left:4px solid var(--warn);background:rgba(251,191,36,.07);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.danger{border-color:var(--bad);background:rgba(248,113,113,.07)}
+.callout.info{border-color:var(--acc);background:rgba(94,177,255,.07)}
+.big-num{font-size:2em;font-weight:800;color:var(--acc2)}
+footer{margin-top:60px;color:var(--sub);font-size:.85em;border-top:1px solid var(--line);padding-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.9em}
+br-table{display:block;overflow-x:auto}
+@media print{.nav{position:static}body{background:#fff;color:#000}}
+</style></head><body>
+<div class="nav"><b>语义手册</b> <a href="../index.html">🏠 总入口</a> <a href="ch/player.html">👤 玩家语义</a> <a href="ch/game.html">🎮 游戏语义</a> <a href="ch/code.html">🛠️ 代码维护语义</a> <a href="ch/fix.html">🩹 修复语义</a> <a href="ch/compat.html">🔗 兼容性语义</a> <a href="ch/bugfix.html">🐛 修 Bug 维护语义</a> <a href="ch/pr.html">📬 PR 语义</a> <a href="ch/glossary.html">📖 术语白话对照表</a> <a href="../index.html#repos">📦 仓库地图</a></div>
+<div class="wrap"><p><a href="../index.html">← 回总入口</a></p>
+<h1>📬 PR 语义</h1>
+<p style="color:var(--sub)">提交代码前必须懂的规矩。含 EXP-009 世界线教训——这次讨论里最重要的方法论。</p>
+
+<h2>一个合格的提交长什么样</h2>
+<ul>
+<li>✅ 一个提交/一个分支只干一件事</li>
+<li>✅ 提交信息说清楚：改了什么、为什么、证据在哪</li>
+<li>✅ 推送后必查 CI，红修到绿</li>
+<li>✅ 实验性改动默认关，不改变现有行为</li>
+<li>❌ 不带未经测试的"顺手改"</li>
+</ul>
+
+<h2>🔴 世界线教训（EXP-009 批判）</h2>
+<div class="card">
+<p><b>出了什么事：</b>EXP-009 的模型迭代，可能是把"同时期的最优结论"落地、把"同时期的不良结论"砍掉。问题是：这些结论来自 <b>不同的随机世界线</b>（不同种子/不同蒙特卡洛抽样）。</p>
+<p><b>为什么错：</b>把 A 世界线的最好结果和 B 世界线的失败结果拼在一起，等于在不同世界线之间挑樱桃。拼出来的"最优"可能只是 <b>当前世界线的运气成分</b>——蒙特卡洛穷举状态下被蒙蔽的最优解。这叫相位错误：你以为在优化策略，其实在拟合噪声。</p>
+</div>
+<div class="callout danger"><b>防骗三规：</b>
+<ol>
+<li><b>对比必须同世界线</b>：A/B 测试永远同种子配对（我们 bench 的 BASE_SEED 机制就是干这个的）</li>
+<li><b>冠军必须换世界线复验</b>：任何"最优模型/最优结论"，必须在一组它没见过的种子上重新测，还赢才算数。<span class="warn">EXP-009b 冠军 66734.8 分目前只是"候选"，复验通过前不能当教师、不能当基线</span></li>
+<li><b>砍结论要留尸</b>：被砍掉的不良结论不许物理删除，移进 invalidated/ 目录标注原因——防止以后不知情的人再捡回来，也防止审计断链</li>
+</ol></div>
+
+<h2>口径纪律</h2>
+<div class="card">
+<p>报分数必须带口径：什么种子、多少局、REC 直跑还是完整 MCTS、哪个 build。不带口径的分数一律拒收。72000/76000 之所以只能听个响，就是因为口径和数据都不在手。</p>
+</div>
+
+<h2>审批与边界</h2>
+<ul>
+<li>动赛马娘相关代码仓库前，<b>先问主人</b>（许可规则）</li>
+<li>往上游（xulai1001）推东西：禁止</li>
+<li>删除文件：先问，重要数据先备份再删</li>
+<li>GitHub token、密钥：永不写进代码和文档，输出日志必须打码</li>
+</ul>
+<footer>花落仓库语义手册 · 生成于 2026-09-13 · 全部页面互相跳转，直接存放在 GitHub 仓库内，免积分查看。<br>
+维护方法：改 <code>semantic_atlas/gen_atlas.py</code> 里的文字，重新运行生成，推送到 repo-atlas 仓库。</footer>
+</div></body></html>

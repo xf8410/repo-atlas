@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🎮 游戏语义 · 花落仓库语义手册</title>
+<style>
+:root{--bg:#0f1419;--card:#1a2129;--card2:#212a35;--line:#2d3743;--txt:#e6e9ed;--sub:#9aa7b4;
+--acc:#5eb1ff;--acc2:#ffd166;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--hold:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;font-size:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+h1{font-size:1.9em;margin:12px 0 6px}h2{font-size:1.35em;margin:34px 0 12px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:1.12em;margin:22px 0 8px;color:var(--acc2)}
+p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
+.nav{position:sticky;top:0;z-index:9;background:rgba(15,20,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
+.nav b{color:var(--acc2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.repo-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .12s}
+.repo-card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.repo-card .name{font-weight:700;font-size:1.05em}
+.repo-card .desc{color:var(--sub);font-size:.9em;margin:6px 0}
+.tag{display:inline-block;padding:1px 9px;border-radius:20px;font-size:.78em;margin-right:5px;border:1px solid var(--line);color:var(--sub)}
+.tag.hot{color:var(--acc2);border-color:var(--acc2)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--card2)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.hold{color:var(--hold)}
+.callout{border-left:4px solid var(--warn);background:rgba(251,191,36,.07);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.danger{border-color:var(--bad);background:rgba(248,113,113,.07)}
+.callout.info{border-color:var(--acc);background:rgba(94,177,255,.07)}
+.big-num{font-size:2em;font-weight:800;color:var(--acc2)}
+footer{margin-top:60px;color:var(--sub);font-size:.85em;border-top:1px solid var(--line);padding-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.9em}
+br-table{display:block;overflow-x:auto}
+@media print{.nav{position:static}body{background:#fff;color:#000}}
+</style></head><body>
+<div class="nav"><b>语义手册</b> <a href="../index.html">🏠 总入口</a> <a href="ch/player.html">👤 玩家语义</a> <a href="ch/game.html">🎮 游戏语义</a> <a href="ch/code.html">🛠️ 代码维护语义</a> <a href="ch/fix.html">🩹 修复语义</a> <a href="ch/compat.html">🔗 兼容性语义</a> <a href="ch/bugfix.html">🐛 修 Bug 维护语义</a> <a href="ch/pr.html">📬 PR 语义</a> <a href="ch/glossary.html">📖 术语白话对照表</a> <a href="../index.html#repos">📦 仓库地图</a></div>
+<div class="wrap"><p><a href="../index.html">← 回总入口</a></p>
+<h1>🎮 游戏语义</h1>
+<p style="color:var(--sub)">拉面杯这个剧本到底在玩什么，以及分数是怎么算的。</p>
+
+<h2>拉面杯（Scenario 14）</h2>
+<div class="card">
+<p>赛马娘有很多育成剧本，拉面杯是第 14 号剧本。特点：除了常规训练，还要 <b>做拉面</b>。</p>
+<ul>
+<li>🍜 做拉面会攒 <b>料理点（PT）</b>，还能提升"盛況度"</li>
+<li>👅 定期有 <b>试吃</b> 检查点，达标给奖励</li>
+<li>📍 训练场地上有 <b>打卡点（checkpoint）</b>，凑齐给被动加成</li>
+</ul>
+<p>所以每回合的选择题比普通剧本多一层：不光练什么，还要不要分心做拉面。</p>
+</div>
+
+<h2>分数是怎么算出来的</h2>
+<div class="card">
+<p>育成结束时的总分，大头来自五维属性。规则（从 1200 段真实数据里量出来的）：</p>
+<ul>
+<li><b>1 点属性 ≈ 3 分</b>（1200 分段的换算率）</li>
+<li><b>1 点 PT 真实价值 ≈ 2 分</b></li>
+<li>比赛名次、技能等另加一点</li>
+</ul>
+<p>我们的 bench（测试场）目前基准线：A 组平均分 <b>64271</b>。</p>
+</div>
+
+<h2>三个容易搞混的数字（口径陷阱）</h2>
+<table>
+<tr><th>数字</th><th>什么口径</th><th>在哪</th></tr>
+<tr><td><b>~64271</b></td><td>bench REC 直跑（不做搜索，直接按策略跑），种子 61444，每臂 10 局</td><td>umaai-rs-fanfix 的 CI</td></tr>
+<tr><td><b>66734.8</b></td><td>EXP-009b 冠军（神经网络迭代出来的最优模型，<span class="warn">未经换种子复验</span>）</td><td>uma-ramen-nn-lab</td></tr>
+<tr><td><b>72000 / 76000</b></td><td>神经网络深度迭代的最好成绩，口径不明（可能是完整 MCTS 或不同 build）</td><td>在暮雪流年的电脑里，<span class="bad">拿不到</span></td></tr>
+</table>
+<div class="callout danger"><b>铁律：不同口径的分数不能互相比。</b>就像米和尺，数字不同不代表东西变了。讨论"提升"之前，先问"同一把尺吗"。</div>
+
+<h2>属性上限与溢出</h2>
+<div class="card">
+<p>每项属性有天花板（比如 1200）。练到天花板之后，<b>再练的部分游戏不记账</b>——练了白练，还花了体力和回合。</p>
+<p>以前的 AI 打分时没把这算清楚，给"练过头"的动作虚高的分，这就是"溢出"病灶。补丁 0008（slack20）试的就是：让 AI 在"选择层"把天花板看得松一点，但游戏记账照旧诚实。</p>
+</div>
+
+<h2>体力、守门与休息</h2>
+<div class="card">
+<ul>
+<li>训练消耗体力，体力低了训练效果差、还可能失败</li>
+<li><b>守门值 40</b>：AI 给自己留的体力缓冲底线。<span class="bad">红线，不许动</span></li>
+<li>休息的价值 = 基础恢复 + 体力缺口换算。v10 判词发现：一局里平均休息 4.1 次，其中 1.8 次归守门管、2.3 次归匿名层管、<b>打分层只管 0.01 次</b>——所以改打分层的休息定价基本没用，作用域错位了</li>
+</ul>
+</div>
+<footer>花落仓库语义手册 · 生成于 2026-09-13 · 全部页面互相跳转，直接存放在 GitHub 仓库内，免积分查看。<br>
+维护方法：改 <code>semantic_atlas/gen_atlas.py</code> 里的文字，重新运行生成，推送到 repo-atlas 仓库。</footer>
+</div></body></html>

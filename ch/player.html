@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>👤 玩家语义 · 花落仓库语义手册</title>
+<style>
+:root{--bg:#0f1419;--card:#1a2129;--card2:#212a35;--line:#2d3743;--txt:#e6e9ed;--sub:#9aa7b4;
+--acc:#5eb1ff;--acc2:#ffd166;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--hold:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;font-size:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+h1{font-size:1.9em;margin:12px 0 6px}h2{font-size:1.35em;margin:34px 0 12px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:1.12em;margin:22px 0 8px;color:var(--acc2)}
+p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
+.nav{position:sticky;top:0;z-index:9;background:rgba(15,20,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
+.nav b{color:var(--acc2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.repo-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .12s}
+.repo-card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.repo-card .name{font-weight:700;font-size:1.05em}
+.repo-card .desc{color:var(--sub);font-size:.9em;margin:6px 0}
+.tag{display:inline-block;padding:1px 9px;border-radius:20px;font-size:.78em;margin-right:5px;border:1px solid var(--line);color:var(--sub)}
+.tag.hot{color:var(--acc2);border-color:var(--acc2)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--card2)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.hold{color:var(--hold)}
+.callout{border-left:4px solid var(--warn);background:rgba(251,191,36,.07);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.danger{border-color:var(--bad);background:rgba(248,113,113,.07)}
+.callout.info{border-color:var(--acc);background:rgba(94,177,255,.07)}
+.big-num{font-size:2em;font-weight:800;color:var(--acc2)}
+footer{margin-top:60px;color:var(--sub);font-size:.85em;border-top:1px solid var(--line);padding-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.9em}
+br-table{display:block;overflow-x:auto}
+@media print{.nav{position:static}body{background:#fff;color:#000}}
+</style></head><body>
+<div class="nav"><b>语义手册</b> <a href="../index.html">🏠 总入口</a> <a href="ch/player.html">👤 玩家语义</a> <a href="ch/game.html">🎮 游戏语义</a> <a href="ch/code.html">🛠️ 代码维护语义</a> <a href="ch/fix.html">🩹 修复语义</a> <a href="ch/compat.html">🔗 兼容性语义</a> <a href="ch/bugfix.html">🐛 修 Bug 维护语义</a> <a href="ch/pr.html">📬 PR 语义</a> <a href="ch/glossary.html">📖 术语白话对照表</a> <a href="../index.html#repos">📦 仓库地图</a></div>
+<div class="wrap"><p><a href="../index.html">← 回总入口</a></p>
+<h1>👤 玩家语义</h1>
+<p style="color:var(--sub)">第一次玩这个游戏的人，先从这里开始。全部大白话。</p>
+
+<h2>你在玩什么</h2>
+<div class="card">
+<p>你是一名 <b>训练员</b>。你的工作：把一个刚入学的马娘（赛马拟人少女），花大约 78 个回合（游戏里叫"三年"），训练成能赢比赛的选手。</p>
+<p>每个回合你只能选 <b>一件事</b> 做：</p>
+<ul>
+<li>🏋️ <b>训练</b>——涨属性（速度/耐力/力量/毅力/智力），但消耗体力</li>
+<li>🚶 <b>外出</b>——恢复心情</li>
+<li>😴 <b>休息</b>——恢复体力</li>
+<li>🏇 <b>比赛</b>——去打比赛，有的比赛是必须打的（育成目标赛）</li>
+</ul>
+<p>毕业时按属性和比赛成绩算一个总分，分越高越好。</p>
+</div>
+
+<h2>支援卡是什么</h2>
+<div class="card"><p>育成开始前你要带 6 张支援卡，相当于请了一个教练团。训练时支援卡会出现在训练场上，和她们一起练收益更高。带谁、怎么练，是策略的一部分。</p></div>
+
+<h2>粉丝数要不要管</h2>
+<div class="callout info"><b>最新结论（2026-09-13，主人定）：</b>粉丝数<b>可能不需要管</b>。因为每个马娘都有自己的育成目标比赛，是必须要打的——该打的比赛一场都少不了，粉丝自然够。有个仓库（umaai-rs-fanskip）专门做"跳过粉丝数判定"，还有个仓库（umaai-rs-fanfix）最初就是修粉丝数达标判定的。<b>但这条结论还要实测确认。</b></div>
+
+<h2>AI 在里面干什么</h2>
+<div class="card">
+<p>我们做的就是替你选"每回合干哪件事"的 AI。它的决策链是：</p>
+<ol>
+<li><b>看局面</b>：体力多少、属性多少、离上限还有多远、下回合有什么比赛</li>
+<li><b>脑内彩排</b>（MCTS 搜索）：把几种走法往后模拟几步</li>
+<li><b>打分</b>：给每种走法算一个分数</li>
+<li><b>选最高分</b> 的那个动作执行</li>
+</ol>
+<p>现在修的病灶就在第 3 步打分：以前给"练到上限之外"的动作算高了分（游戏其实不记账），给休息的定价也有些错位。</p>
+</div>
+
+<h2>一个值得注意的信号</h2>
+<div class="callout"><b>主人观察（待实测）：</b>如果 AI 在某个回合自选了比赛，可能说明当前回合的训练选项确实非常垃圾，AI 才去"逃"进比赛。这个行为可以当诊断信号用，但要实际测试验证。</div>
+<footer>花落仓库语义手册 · 生成于 2026-09-13 · 全部页面互相跳转，直接存放在 GitHub 仓库内，免积分查看。<br>
+维护方法：改 <code>semantic_atlas/gen_atlas.py</code> 里的文字，重新运行生成，推送到 repo-atlas 仓库。</footer>
+</div></body></html>

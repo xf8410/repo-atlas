@@ -1,0 +1,3014 @@
+{
+ "Agora-Workbench": {
+  "description": "Agora Workbench —— 大仓优化的安卓 AI 工作台：多模型对话/工具调用/GitHub 全套工具/工作区持久化，适配超大仓库与远程工作区",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-10",
+  "size_kb": 33176,
+  "branches": [
+   {
+    "name": "courier/file-delivery",
+    "sha": "a3feae9",
+    "date": ""
+   },
+   {
+    "name": "main",
+    "sha": "dd6e7d6",
+    "date": ""
+   },
+   {
+    "name": "workbench/agent-team-ui",
+    "sha": "b9656e1",
+    "date": ""
+   },
+   {
+    "name": "workbench/agora-reliability-v1",
+    "sha": "309d9e8",
+    "date": ""
+   },
+   {
+    "name": "workbench/audit-p0-tools",
+    "sha": "db91c7b",
+    "date": ""
+   },
+   {
+    "name": "workbench/binary-audit-tools",
+    "sha": "e5e311b",
+    "date": ""
+   },
+   {
+    "name": "workbench/chat-history-performance-1.4-fix",
+    "sha": "8614ff1",
+    "date": ""
+   },
+   {
+    "name": "workbench/ci-apk-metadata-probe",
+    "sha": "c139dc6",
+    "date": ""
+   },
+   {
+    "name": "workbench/complete-long-reasoning-timeout-fix",
+    "sha": "1b9992f",
+    "date": ""
+   },
+   {
+    "name": "workbench/compose-anthropic-stream-usage-20260809",
+    "sha": "084bf19",
+    "date": ""
+   },
+   {
+    "name": "workbench/connect-openai-token-usage-20260809",
+    "sha": "858bb2a",
+    "date": ""
+   },
+   {
+    "name": "workbench/consolidate-clone-tool",
+    "sha": "9b31957",
+    "date": ""
+   },
+   {
+    "name": "workbench/consolidate-missing-features",
+    "sha": "295519c",
+    "date": ""
+   },
+   {
+    "name": "workbench/continue-missing-features",
+    "sha": "791979b",
+    "date": ""
+   },
+   {
+    "name": "workbench/deduplicate-tool-definitions-20260809",
+    "sha": "83f1084",
+    "date": ""
+   },
+   {
+    "name": "workbench/dispatch-guardrails",
+    "sha": "0e17fa0",
+    "date": ""
+   },
+   {
+    "name": "workbench/durable-archive-action-logs",
+    "sha": "1b46c06",
+    "date": ""
+   },
+   {
+    "name": "workbench/emit-mapped-openai-token-usage-20260809",
+    "sha": "6ae3404",
+    "date": ""
+   },
+   {
+    "name": "workbench/enable-zip-bin-attachments",
+    "sha": "76abca0",
+    "date": ""
+   },
+   {
+    "name": "workbench/export-backup-16pct-fix",
+    "sha": "2596e68",
+    "date": ""
+   },
+   {
+    "name": "workbench/fgs-start-timeout-60",
+    "sha": "50f32a3",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-backup-classification-package-20260818",
+    "sha": "f105b21",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-backup-import-oom-20260810",
+    "sha": "8aafc4a",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-client-resilience-ci",
+    "sha": "bf74d3e",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-client-resilience-ci-v2",
+    "sha": "9503054",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-client-resilience-ci-v3",
+    "sha": "25aec11",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-client-resilience-ci-v4",
+    "sha": "01fd184",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-conversation-cross-talk",
+    "sha": "9b34b01",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-github-json-chat-leak",
+    "sha": "c933a03",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-github-tool-suite-build",
+    "sha": "2af9cde",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-invisible-messages",
+    "sha": "50a9480",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-log-summary-truncation-20260826",
+    "sha": "3559884",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-long-conversation-durability",
+    "sha": "4dc6b2e",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-main-verification-artifact-upload-20260809",
+    "sha": "c0673d0",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-negative-snackbar-padding",
+    "sha": "6c03a15",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-negative-snackbar-padding-v2",
+    "sha": "8672ead",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-openai-stream-termination",
+    "sha": "f460d3d",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-openai-think-and-all-read-timeouts",
+    "sha": "715dadc",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-red-build",
+    "sha": "9264c22",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-release-dispatch-defaults-20260810",
+    "sha": "92a68f2",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-reply-disappears-on-next-send",
+    "sha": "da0a4ad",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-stable-signing-and-latest-release",
+    "sha": "8f043c1",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-uma-read-endpoint",
+    "sha": "b12b3a5",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-uma-upload-checkpoint-isolation-20260812",
+    "sha": "df6f275",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-version-release-pipeline",
+    "sha": "2bd2836",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-zip-cursor-window",
+    "sha": "0cabfa2",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-zip-cursor-window-v2",
+    "sha": "e3e5905",
+    "date": ""
+   },
+   {
+    "name": "workbench/fork-upstream-pr-workspace",
+    "sha": "327b866",
+    "date": ""
+   },
+   {
+    "name": "workbench/generation-ui-timeout-tools-20260818",
+    "sha": "33a79f8",
+    "date": ""
+   },
+   {
+    "name": "workbench/github-actions-manual-window-20260809",
+    "sha": "bddb2c0",
+    "date": ""
+   },
+   {
+    "name": "workbench/github-actions-status-model-20260809",
+    "sha": "9294d0d",
+    "date": ""
+   },
+   {
+    "name": "workbench/github-binary-upload",
+    "sha": "33fcf2c",
+    "date": ""
+   },
+   {
+    "name": "workbench/github-code-editor",
+    "sha": "ee80403",
+    "date": ""
+   },
+   {
+    "name": "workbench/github-create-repository-tool",
+    "sha": "81087f9",
+    "date": ""
+   },
+   {
+    "name": "workbench/github-pr-merge-tools",
+    "sha": "a36fe4a",
+    "date": ""
+   },
+   {
+    "name": "workbench/github-task-completion",
+    "sha": "f52a580",
+    "date": ""
+   },
+   {
+    "name": "workbench/github-tool-suite",
+    "sha": "185dd72",
+    "date": ""
+   },
+   {
+    "name": "workbench/integrate-client-resilience-fixes",
+    "sha": "9734ab0",
+    "date": ""
+   },
+   {
+    "name": "workbench/local-artifact-store-phase1-20260812",
+    "sha": "fd47daf",
+    "date": ""
+   },
+   {
+    "name": "workbench/lsp-language-packs",
+    "sha": "6c8b19a",
+    "date": ""
+   },
+   {
+    "name": "workbench/map-anthropic-token-usage-20260809",
+    "sha": "1fb1547",
+    "date": ""
+   },
+   {
+    "name": "workbench/map-openai-token-usage-20260809",
+    "sha": "c7287fe",
+    "date": ""
+   },
+   {
+    "name": "workbench/mobile-long-stream-performance-20260814",
+    "sha": "95f2841",
+    "date": ""
+   },
+   {
+    "name": "workbench/multiagent-team",
+    "sha": "c2b0689",
+    "date": ""
+   },
+   {
+    "name": "workbench/net-download-file",
+    "sha": "2d9ebba",
+    "date": ""
+   },
+   {
+    "name": "workbench/pc-ramen-test-workbench",
+    "sha": "e4c284a",
+    "date": ""
+   },
+   {
+    "name": "workbench/pr-close-and-upstream-resolver",
+    "sha": "ffc6123",
+    "date": ""
+   },
+   {
+    "name": "workbench/project-aware-code-intelligence",
+    "sha": "f218440",
+    "date": ""
+   },
+   {
+    "name": "workbench/public-repository-browser",
+    "sha": "63e8f8c",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-datasource",
+    "sha": "d9d5bd5",
+    "date": ""
+   },
+   {
+    "name": "workbench/register-manual-main-build-20260811",
+    "sha": "aefc6eb",
+    "date": ""
+   },
+   {
+    "name": "workbench/register-net-download",
+    "sha": "58d6d05",
+    "date": ""
+   },
+   {
+    "name": "workbench/register-uma-session-export-tools-20260810",
+    "sha": "87253ca",
+    "date": ""
+   },
+   {
+    "name": "workbench/release-1.4.6-current-main",
+    "sha": "9364c19",
+    "date": ""
+   },
+   {
+    "name": "workbench/release-1.4.7",
+    "sha": "58136af",
+    "date": ""
+   },
+   {
+    "name": "workbench/release-1.4.8-session-upload-20260810",
+    "sha": "d3f4a1c",
+    "date": ""
+   },
+   {
+    "name": "workbench/release-1.4.9-defaults",
+    "sha": "bfcdab2",
+    "date": ""
+   },
+   {
+    "name": "workbench/release-1.5.1",
+    "sha": "de2a29b",
+    "date": ""
+   },
+   {
+    "name": "workbench/remove-about-page",
+    "sha": "9e9fa58",
+    "date": ""
+   },
+   {
+    "name": "workbench/remove-stream-read-hard-timeout",
+    "sha": "8deeb4c",
+    "date": ""
+   },
+   {
+    "name": "workbench/repo-hygiene-cleanup-20260826",
+    "sha": "bae9e91",
+    "date": ""
+   },
+   {
+    "name": "workbench/root-fix-conversation-loss-v5-phase2",
+    "sha": "aa24261",
+    "date": ""
+   },
+   {
+    "name": "workbench/root-fix-conversation-loss-v5-phase3",
+    "sha": "ef1a8db",
+    "date": ""
+   },
+   {
+    "name": "workbench/root-fix-conversation-loss-v5-phase4-bounded",
+    "sha": "266dbcb",
+    "date": ""
+   },
+   {
+    "name": "workbench/root-fix-conversation-loss-v5-phase4",
+    "sha": "f736b4b",
+    "date": ""
+   },
+   {
+    "name": "workbench/root-fix-conversation-loss-v5-phase5-tests-scroll-anchor",
+    "sha": "863ff7e",
+    "date": ""
+   },
+   {
+    "name": "workbench/root-fix-conversation-loss-v5",
+    "sha": "d690c3f",
+    "date": ""
+   },
+   {
+    "name": "workbench/root-fix-release-tools-phase1",
+    "sha": "2536016",
+    "date": ""
+   },
+   {
+    "name": "workbench/separate-public-repo-read",
+    "sha": "820d14c",
+    "date": ""
+   },
+   {
+    "name": "workbench/session-usage-dashboard-20260813",
+    "sha": "5881b1a",
+    "date": ""
+   },
+   {
+    "name": "workbench/sign-1.4.7-debug",
+    "sha": "00917b2",
+    "date": ""
+   },
+   {
+    "name": "workbench/spreadsheet-attachments-20260807",
+    "sha": "b796950",
+    "date": ""
+   },
+   {
+    "name": "workbench/spreadsheet-attachments-v2-20260807",
+    "sha": "5bdce9a",
+    "date": ""
+   },
+   {
+    "name": "workbench/sqlite-oversize-row-guard",
+    "sha": "fa4b186",
+    "date": ""
+   },
+   {
+    "name": "workbench/stop-interrupt-draft-loss-20260826",
+    "sha": "f139144",
+    "date": ""
+   },
+   {
+    "name": "workbench/todo-history-blank-sniff",
+    "sha": "c306452",
+    "date": ""
+   },
+   {
+    "name": "workbench/token-usage-port",
+    "sha": "0574cfb",
+    "date": ""
+   },
+   {
+    "name": "workbench/tool-detail-overlap-fix-20260826",
+    "sha": "6260a24",
+    "date": ""
+   },
+   {
+    "name": "workbench/tool-memory-chat-fix",
+    "sha": "6930454",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-binary-session-export-20260810",
+    "sha": "ce1028c",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-broad-local-reader",
+    "sha": "9f1f097",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-export-download-tree-signing-20260811",
+    "sha": "354f51b",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-export-picker-tree-batching",
+    "sha": "cd7a288",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-git-blob-upload-20260810",
+    "sha": "bbd815d",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-git-tree-20260810",
+    "sha": "2e702a9",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-overlay-capture-toggle",
+    "sha": "e6f190a",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-session-batched-upload-progress-20260811",
+    "sha": "0817fc6",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-session-complete-upload-json-20260810",
+    "sha": "a1b79f8",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-session-export-resume-20260810",
+    "sha": "abc5ee2",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-session-github-upload-pipeline-20260810",
+    "sha": "4147e5e",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-session-github-upload-tool-20260810",
+    "sha": "2138dca",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-session-msgpack-json-20260810",
+    "sha": "e9857c9",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-session-zip-export-20260810",
+    "sha": "fa31044",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-storage-files-pagination-20260810",
+    "sha": "20e368b",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-upload-durable-restart-20260826",
+    "sha": "48e5806",
+    "date": ""
+   },
+   {
+    "name": "workbench/unified-token-usage-model-20260809",
+    "sha": "85a1f9b",
+    "date": ""
+   },
+   {
+    "name": "workbench/upstream-sync-conflict-resolution",
+    "sha": "d5c869f",
+    "date": ""
+   },
+   {
+    "name": "workbench/v3-release",
+    "sha": "645f7bd",
+    "date": ""
+   },
+   {
+    "name": "workbench/workspace-lane-sync-ui",
+    "sha": "9766269",
+    "date": ""
+   },
+   {
+    "name": "workbench/workspace-persistent-chat",
+    "sha": "3738b40",
+    "date": ""
+   },
+   {
+    "name": "workbench/zip-attachments-final",
+    "sha": "8a74296",
+    "date": ""
+   },
+   {
+    "name": "workbench/zip-attachments-no-limits",
+    "sha": "d3d57ea",
+    "date": ""
+   },
+   {
+    "name": "workbench/zip-attachments-no-limits-v2",
+    "sha": "d3d57ea",
+    "date": ""
+   },
+   {
+    "name": "workbench/zip-attachments-no-limits-v3",
+    "sha": "d3d57ea",
+    "date": ""
+   },
+   {
+    "name": "workbench/zip-attachments-unrestricted",
+    "sha": "bae2e91",
+    "date": ""
+   }
+  ]
+ },
+ "Hachimi-Edge": {
+  "description": "Hachimi-Edge 上游 fork（kairusds）—— 资源注入框架增强分支基座，gala 系列改造仓的上游来源",
+  "fork": true,
+  "default": "main",
+  "updated": "2026-09-10",
+  "size_kb": 35779,
+  "branches": [
+   {
+    "name": "auto-security-fix",
+    "sha": "76d6c4b",
+    "date": ""
+   },
+   {
+    "name": "downloader-integrity",
+    "sha": "36f6fb4",
+    "date": ""
+   },
+   {
+    "name": "fix-same-chara",
+    "sha": "2704952",
+    "date": ""
+   },
+   {
+    "name": "main",
+    "sha": "cedb884",
+    "date": ""
+   },
+   {
+    "name": "revert-152-beyond_live_crash_fix",
+    "sha": "97c3476",
+    "date": ""
+   },
+   {
+    "name": "staging",
+    "sha": "41287e5",
+    "date": ""
+   },
+   {
+    "name": "tl-meta",
+    "sha": "6b52ab5",
+    "date": ""
+   },
+   {
+    "name": "webview-edits",
+    "sha": "97f530e",
+    "date": ""
+   },
+   {
+    "name": "workbench/game-init-always",
+    "sha": "a8551f8",
+    "date": ""
+   }
+  ]
+ },
+ "cygames-hachimi-tl-zh-cn": {
+  "description": "",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-08-20",
+  "size_kb": 295848,
+  "branches": [
+   {
+    "name": "dev",
+    "sha": "21452ab",
+    "date": ""
+   },
+   {
+    "name": "main",
+    "sha": "a125370",
+    "date": ""
+   }
+  ]
+ },
+ "duel-links-lite": {
+  "description": "决斗链接离线学习伴侣 — 卡牌查库/组合检索本地化工具，17 个开发分支",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 191,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "9d23cef",
+    "date": ""
+   },
+   {
+    "name": "workbench/aoi",
+    "sha": "a0078eb",
+    "date": ""
+   },
+   {
+    "name": "workbench/aoi-fix",
+    "sha": "73d78ac",
+    "date": ""
+   },
+   {
+    "name": "workbench/aoi-fix2",
+    "sha": "3ef11b6",
+    "date": ""
+   },
+   {
+    "name": "workbench/api-enrich",
+    "sha": "014b14f",
+    "date": ""
+   },
+   {
+    "name": "workbench/card-api",
+    "sha": "ee36307",
+    "date": ""
+   },
+   {
+    "name": "workbench/field-5x5",
+    "sha": "889f27c",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-build-5zone",
+    "sha": "4c90752",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-img-param",
+    "sha": "7125e70",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-kotlin",
+    "sha": "c225bc1",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-normal",
+    "sha": "5c6b021",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-test-imports",
+    "sha": "1122e37",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-xyz",
+    "sha": "1bd1a08",
+    "date": ""
+   },
+   {
+    "name": "workbench/full-api-pull",
+    "sha": "0a80013",
+    "date": ""
+   },
+   {
+    "name": "workbench/initial",
+    "sha": "1386bff",
+    "date": ""
+   },
+   {
+    "name": "workbench/more-cards",
+    "sha": "94adb05",
+    "date": ""
+   },
+   {
+    "name": "workbench/timing",
+    "sha": "10e1da9",
+    "date": ""
+   }
+  ]
+ },
+ "football-game": {
+  "description": "足球游戏（Godot 4 原型）：BestSoccer 玩法原型场，Kotlin+LibGDX 版的前身",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 449,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "dda45f5",
+    "date": ""
+   },
+   {
+    "name": "workbench/build-apk",
+    "sha": "ad36086",
+    "date": ""
+   },
+   {
+    "name": "workbench/real-team-quickmatch",
+    "sha": "fa833fb",
+    "date": ""
+   }
+  ]
+ },
+ "football-game-kotlin": {
+  "description": "足球游戏（Kotlin+LibGDX 移植版）：BestSoccer 生态的玩法验证场，22 个开发分支",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 397,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "ef7481d",
+    "date": ""
+   },
+   {
+    "name": "workbench/action-button",
+    "sha": "dd94d33",
+    "date": ""
+   },
+   {
+    "name": "workbench/context-action-button",
+    "sha": "d3f2b37",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-build",
+    "sha": "1c78e70",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-colors",
+    "sha": "e59d3c4",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-compile-final",
+    "sha": "1f7f6cb",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-compose",
+    "sha": "5b66d81",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-duplicate-dotackle",
+    "sha": "067a1e6",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-errors",
+    "sha": "1f7f62f",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-fall-anim",
+    "sha": "7264d95",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-gradle",
+    "sha": "ba92e90",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-looks-imports",
+    "sha": "d95f72f",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-native-canvas",
+    "sha": "1e8dfbc",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-resources",
+    "sha": "5d958d4",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-setballowner",
+    "sha": "ce8f360",
+    "date": ""
+   },
+   {
+    "name": "workbench/gk-sub-position-choice",
+    "sha": "7c019d7",
+    "date": ""
+   },
+   {
+    "name": "workbench/init",
+    "sha": "60e55a0",
+    "date": ""
+   },
+   {
+    "name": "workbench/league-standings",
+    "sha": "868781a",
+    "date": ""
+   },
+   {
+    "name": "workbench/player-models",
+    "sha": "c771a80",
+    "date": ""
+   },
+   {
+    "name": "workbench/referee-render",
+    "sha": "a504eed",
+    "date": ""
+   },
+   {
+    "name": "workbench/referee-tackles",
+    "sha": "e71f0d5",
+    "date": ""
+   },
+   {
+    "name": "workbench/star-avatars",
+    "sha": "81d4b62",
+    "date": ""
+   }
+  ]
+ },
+ "hachimi-edge-gala": {
+  "description": "Hachimi-Edge 分支改造版 —— 适配 BestSoccer（galasports 足球游戏）的资源替换注入框架，Rust 实现",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-10",
+  "size_kb": 29321,
+  "branches": [
+   {
+    "name": "auto-security-fix",
+    "sha": "09ed6aa",
+    "date": ""
+   },
+   {
+    "name": "main",
+    "sha": "fb2bb98",
+    "date": ""
+   }
+  ]
+ },
+ "hachimi-template-gala": {
+  "description": "Hachimi mod 模板 —— 适配 Best Soccer（galasports）的资源替换 mod 开发模板，含 CI 自动打包发布",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-10",
+  "size_kb": 96,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "60ad800",
+    "date": ""
+   }
+  ]
+ },
+ "hlpatch": {
+  "description": "赛马娘育成内存读取插件 — 基于 Hachimi 框架，IL2CPP 内存数据实时读取 + HTTP 端点 + 自动推送",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-10",
+  "size_kb": 65402,
+  "branches": [
+   {
+    "name": "backup/cloud-main-7e3ac17",
+    "sha": "7e3ac17",
+    "date": ""
+   },
+   {
+    "name": "backup/cloud-main-7fbf0ec",
+    "sha": "7fbf0ec",
+    "date": ""
+   },
+   {
+    "name": "backup/workbench-slim-8673b4e",
+    "sha": "8673b4e",
+    "date": ""
+   },
+   {
+    "name": "diag/ab-20260712",
+    "sha": "f2228e5",
+    "date": ""
+   },
+   {
+    "name": "diag/summary-sm-acquire-20260712",
+    "sha": "60d542b",
+    "date": ""
+   },
+   {
+    "name": "fix/shining-command-id",
+    "sha": "b1ee901",
+    "date": ""
+   },
+   {
+    "name": "fix-fallback-v3223",
+    "sha": "1ab4fc5",
+    "date": ""
+   },
+   {
+    "name": "main",
+    "sha": "428830f",
+    "date": ""
+   },
+   {
+    "name": "workbench/add-il2cpp-signature-and-invoke-guards-20260806",
+    "sha": "e079097",
+    "date": ""
+   },
+   {
+    "name": "workbench/career-skip-20260829",
+    "sha": "afd5ada",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-md5log-hooks",
+    "sha": "f8a8935",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-md5log-routes",
+    "sha": "ebd1111",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-read-string-build",
+    "sha": "4c63967",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-runtime-invoke-global-types-20260806",
+    "sha": "99f612b",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-sniff-v2-release",
+    "sha": "e3bebba",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-v32716-release-checkout-20260817",
+    "sha": "d7d1188",
+    "date": ""
+   },
+   {
+    "name": "workbench/generated-succession-runtime-l-20260807",
+    "sha": "58e374d",
+    "date": ""
+   },
+   {
+    "name": "workbench/http-proxy-endpoint-20260907",
+    "sha": "d65930d",
+    "date": ""
+   },
+   {
+    "name": "workbench/keychain-source-observer-20260817",
+    "sha": "87013ad",
+    "date": ""
+   },
+   {
+    "name": "workbench/makemd5-tls-probe-v3253",
+    "sha": "7b42f1b",
+    "date": ""
+   },
+   {
+    "name": "workbench/next-generation-so-foundation-20260808",
+    "sha": "c878896",
+    "date": ""
+   },
+   {
+    "name": "workbench/protocol-layered-decode-20260815",
+    "sha": "70a3917",
+    "date": ""
+   },
+   {
+    "name": "workbench/publish-v3.25.2",
+    "sha": "defb399",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-hachimi-text-observer-20260807",
+    "sha": "02c376b",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-runtime-evidence-20260804",
+    "sha": "a77b14b",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-timeline-observation-v2",
+    "sha": "33065e1",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-turn-fix-20260820",
+    "sha": "f17f7b3",
+    "date": ""
+   },
+   {
+    "name": "workbench/release-v3-27-3",
+    "sha": "50a5718",
+    "date": ""
+   },
+   {
+    "name": "workbench/release-v32714-signup-plaintext",
+    "sha": "eb57817",
+    "date": ""
+   },
+   {
+    "name": "workbench/release-v32715-layered-protocol",
+    "sha": "7430001",
+    "date": ""
+   },
+   {
+    "name": "workbench/release-v32716-keychain-source",
+    "sha": "995219d",
+    "date": ""
+   },
+   {
+    "name": "workbench/remove-redaction-guidance-20260806",
+    "sha": "709af82",
+    "date": ""
+   },
+   {
+    "name": "workbench/remove-remaining-risk-guidance-20260806",
+    "sha": "cb3ca2f",
+    "date": ""
+   },
+   {
+    "name": "workbench/signup-plaintext-observer-20260815",
+    "sha": "8bc159a",
+    "date": ""
+   },
+   {
+    "name": "workbench/sigsegv-guard-v32723-v2",
+    "sha": "1ea40b2",
+    "date": ""
+   },
+   {
+    "name": "workbench/sigsegv-guard-v32723-v3",
+    "sha": "b8d0ae4",
+    "date": ""
+   },
+   {
+    "name": "workbench/sigsegv-guard-v32723",
+    "sha": "cd489a0",
+    "date": ""
+   },
+   {
+    "name": "workbench/slim",
+    "sha": "8673b4e",
+    "date": ""
+   },
+   {
+    "name": "workbench/sniff-default-on",
+    "sha": "dc195df",
+    "date": ""
+   },
+   {
+    "name": "workbench/sniff-default-on-build",
+    "sha": "2485def",
+    "date": ""
+   },
+   {
+    "name": "workbench/sniff-long-capture",
+    "sha": "8147959",
+    "date": ""
+   },
+   {
+    "name": "workbench/sniff-messagepack",
+    "sha": "a2829d1",
+    "date": ""
+   },
+   {
+    "name": "workbench/sniff-v2",
+    "sha": "1d3ddb4",
+    "date": ""
+   },
+   {
+    "name": "workbench/succession-factor-evidence",
+    "sha": "3f86743",
+    "date": ""
+   },
+   {
+    "name": "workbench/succession-white-factor-audit-20260827",
+    "sha": "2cde9f5",
+    "date": ""
+   },
+   {
+    "name": "workbench/training-anim-skip-20260826",
+    "sha": "d75ba1f",
+    "date": ""
+   },
+   {
+    "name": "workbench/unified-observation-endpoint-implementation-20260806",
+    "sha": "8038068",
+    "date": ""
+   },
+   {
+    "name": "workbench/unified-observation-endpoint-upgrade-plan-20260806",
+    "sha": "a14cbf6",
+    "date": ""
+   },
+   {
+    "name": "workbench/unified-observation-k-factor-il2cpp-storage-20260807",
+    "sha": "dee518a",
+    "date": ""
+   },
+   {
+    "name": "workbench/unitywebrequest-auth-observer",
+    "sha": "4bba4cd",
+    "date": ""
+   },
+   {
+    "name": "workbench/update-repository-introduction-20260815",
+    "sha": "30ec81e",
+    "date": ""
+   },
+   {
+    "name": "workbench/v32715-home-training-gains",
+    "sha": "465ddf1",
+    "date": ""
+   }
+  ]
+ },
+ "hlpatch-observation-architecture": {
+  "description": "hlpatch SO实时观测、完整协议持久化与Agora历史解析架构归档",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-08-08",
+  "size_kb": 62,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "4b2a9df",
+    "date": ""
+   },
+   {
+    "name": "workbench/correct-session-archive-policy-and-add-ramen-finish-20260808",
+    "sha": "4d74c71",
+    "date": ""
+   },
+   {
+    "name": "workbench/decode-session-responses-20260810",
+    "sha": "4b2a9df",
+    "date": ""
+   },
+   {
+    "name": "workbench/initial-architecture-introduction-20260808",
+    "sha": "8d3b999",
+    "date": ""
+   },
+   {
+    "name": "workbench/session-1786423493816-21576-465",
+    "sha": "81b7d7d",
+    "date": ""
+   }
+  ]
+ },
+ "ramen-manual": {
+  "description": "拉面杯规则手册归档 — 玩法机制、流程与规则的中文整理存档",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 2431,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "e7c2082",
+    "date": ""
+   },
+   {
+    "name": "workbench/mobile-ramen-apk",
+    "sha": "46ae136",
+    "date": ""
+   }
+  ]
+ },
+ "ramen-scenario-analyzer-mobile": {
+  "description": "拉面杯纯状态分析器（Android）— 素材/盛況度/支援卡显示，纯展示不决策",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 164,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "18baf22",
+    "date": ""
+   }
+  ]
+ },
+ "ramen-training-advisor": {
+  "description": "拉面杯训练决策器 — hzyhhzy 手写逻辑移植 + 动态权重（Kotlin）",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 22,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "f2f0bde",
+    "date": ""
+   }
+  ]
+ },
+ "ranko-love-archive": {
+  "description": "ranko.love 站点数据归档 — 非赛马娘项目的资料收藏仓",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 10249,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "90e74d4",
+    "date": ""
+   },
+   {
+    "name": "workbench/repository-purpose-audit-202608",
+    "sha": "440ec76",
+    "date": ""
+   }
+  ]
+ },
+ "uma-ai-assistant": {
+  "description": "赛马娘AI助手 - 悬浮窗仪表盘+截图OCR",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-07-26",
+  "size_kb": 23079,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "7b4cd29",
+    "date": ""
+   },
+   {
+    "name": "workbench/repository-purpose-audit-202608",
+    "sha": "8b0d351",
+    "date": ""
+   }
+  ]
+ },
+ "uma-container": {
+  "description": "赛马娘（ウマ娘）Android 容器化运行研究：把游戏嵌进宿主 App（umawork）内同屏运行。实验性项目，存在账号风险声明",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 19,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "792b006",
+    "date": ""
+   }
+  ]
+ },
+ "uma-data": {
+  "description": "赛马娘育成AI训练数据集 — MCTS策略+比赛模拟器价值评估数据",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 157909,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "4a57905",
+    "date": ""
+   },
+   {
+    "name": "workbench/repository-purpose-audit-202608",
+    "sha": "456e4d7",
+    "date": ""
+   }
+  ]
+ },
+ "uma-juece": {
+  "description": "赛马娘育成辅助浮窗 — Android 悬浮窗实时显示属性/训练增益/Buff/AI决策推荐",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 687,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "fb50340",
+    "date": ""
+   },
+   {
+    "name": "workbench/repository-purpose-audit-202608",
+    "sha": "9917709",
+    "date": ""
+   }
+  ]
+ },
+ "uma-juece-ramen": {
+  "description": "赛马娘拉面杯专用 Android 决策浮窗，基于 uma-juece，机制与数据对齐 xulai1001/umaai-rs",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 934,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "7ea7cc5",
+    "date": ""
+   },
+   {
+    "name": "workbench/accuracy-v040",
+    "sha": "94eb96a",
+    "date": ""
+   },
+   {
+    "name": "workbench/align-upstream-ea547",
+    "sha": "4967aa2",
+    "date": ""
+   },
+   {
+    "name": "workbench/board-charts",
+    "sha": "a880582",
+    "date": ""
+   },
+   {
+    "name": "workbench/board-vertical-candidates",
+    "sha": "75765ee",
+    "date": ""
+   },
+   {
+    "name": "workbench/card-filter-from-ai-ru-wang-xi",
+    "sha": "3ec4bdb",
+    "date": ""
+   },
+   {
+    "name": "workbench/cloud-card-benchmark",
+    "sha": "c466221",
+    "date": ""
+   },
+   {
+    "name": "workbench/decision-log-v1",
+    "sha": "f8c6550",
+    "date": ""
+   },
+   {
+    "name": "workbench/float-fix-v0.3.6",
+    "sha": "cfdb29a",
+    "date": ""
+   },
+   {
+    "name": "workbench/hotfix-heads-fill",
+    "sha": "57462fb",
+    "date": ""
+   },
+   {
+    "name": "workbench/import-uma-juece",
+    "sha": "c12b516",
+    "date": ""
+   },
+   {
+    "name": "workbench/low-vital-rest-safety",
+    "sha": "b327ff4",
+    "date": ""
+   },
+   {
+    "name": "workbench/merge-pr5-training-heads",
+    "sha": "a689fc3",
+    "date": ""
+   },
+   {
+    "name": "workbench/modularize-rust-core",
+    "sha": "679197a",
+    "date": ""
+   },
+   {
+    "name": "workbench/overlay-toggle-v035",
+    "sha": "394efef",
+    "date": ""
+   },
+   {
+    "name": "workbench/port-pc-ramen-planners",
+    "sha": "df1acb9",
+    "date": ""
+   },
+   {
+    "name": "workbench/power-guts-benchmark",
+    "sha": "b091d74",
+    "date": ""
+   },
+   {
+    "name": "workbench/pr22-reconcile-inject",
+    "sha": "43706a0",
+    "date": ""
+   },
+   {
+    "name": "workbench/protocol-align-turn-and-cardid",
+    "sha": "7654956",
+    "date": ""
+   },
+   {
+    "name": "workbench/publish-card-results",
+    "sha": "65f9851",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-http-api",
+    "sha": "3eb4160",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-upload",
+    "sha": "94aa8a5",
+    "date": ""
+   },
+   {
+    "name": "workbench/reconnect-replay-v031",
+    "sha": "92c54a6",
+    "date": ""
+   },
+   {
+    "name": "workbench/release-apk-tag-fix",
+    "sha": "f20a6bc",
+    "date": ""
+   },
+   {
+    "name": "workbench/rerun-upstream-3f37",
+    "sha": "818255a",
+    "date": ""
+   },
+   {
+    "name": "workbench/show-training-recommendation",
+    "sha": "c165456",
+    "date": ""
+   },
+   {
+    "name": "workbench/so-ai-fallback-v32722",
+    "sha": "90265b2",
+    "date": ""
+   },
+   {
+    "name": "workbench/strict-arm-native-build",
+    "sha": "4e900bd",
+    "date": ""
+   },
+   {
+    "name": "workbench/strict-runtime-state-adapter",
+    "sha": "323d339",
+    "date": ""
+   },
+   {
+    "name": "workbench/test-upstream-compositions",
+    "sha": "1f7a19a",
+    "date": ""
+   },
+   {
+    "name": "workbench/upstream-search-integration",
+    "sha": "a0d0476",
+    "date": ""
+   },
+   {
+    "name": "workbench/upstream-sync-real-heads",
+    "sha": "983d64f",
+    "date": ""
+   },
+   {
+    "name": "workbench/v032-observed-heads",
+    "sha": "1130ee0",
+    "date": ""
+   },
+   {
+    "name": "workbench/warning-text-display",
+    "sha": "1130ee0",
+    "date": ""
+   }
+  ]
+ },
+ "uma-kouryaku-tools-mirror": {
+  "description": "ウマ娘.攻略.tools 全量镜像：140赛道 course_param 分段/坡道/相位 + 317赛事数据（自动抓取存档）",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 71,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "047bc80",
+    "date": ""
+   },
+   {
+    "name": "workbench/audit-fix",
+    "sha": "6244fb2",
+    "date": ""
+   },
+   {
+    "name": "workbench/mirror-20260907",
+    "sha": "49f5e5e",
+    "date": ""
+   }
+  ]
+ },
+ "uma-landscape": {
+  "description": "赛马娘（日服）强制横屏 Zygisk 模块 — 引擎级朝向 hook，独立于 Hachimi/hlpatch 运行",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 16,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "a4ee9f8",
+    "date": ""
+   },
+   {
+    "name": "workbench/landscape-v1",
+    "sha": "c6a2c60",
+    "date": ""
+   },
+   {
+    "name": "workbench/uienh-v0.2",
+    "sha": "70da0c8",
+    "date": ""
+   }
+  ]
+ },
+ "uma-liuchang-hachimiso": {
+  "description": "赛马娘卡顿（流转）诊断 Hachimi SO 插件 — 帧率/卡顿采样分析插件",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 14,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "88534cb",
+    "date": ""
+   },
+   {
+    "name": "workbench/initial-hachimi-plugin",
+    "sha": "c3b34e4",
+    "date": ""
+   }
+  ]
+ },
+ "uma-mobile-decision-pipeline": {
+  "description": "赛马娘手机端采集流水线 — Session 同步 + MessagePack 解码 + 上传决策链路",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 218,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "69e87a3",
+    "date": ""
+   },
+   {
+    "name": "workbench/bootstrap-kotlin-collector-20260812",
+    "sha": "7bc6bf9",
+    "date": ""
+   },
+   {
+    "name": "workbench/complete-json-support-20260813",
+    "sha": "0d28aad",
+    "date": ""
+   },
+   {
+    "name": "workbench/complete-training-state-validation-20260814",
+    "sha": "ea22e42",
+    "date": ""
+   },
+   {
+    "name": "workbench/decode-raw-packages-to-json-20260813",
+    "sha": "0e4248f",
+    "date": ""
+   },
+   {
+    "name": "workbench/derive-training-state-evidence-20260813",
+    "sha": "c71421f",
+    "date": ""
+   },
+   {
+    "name": "workbench/export-complete-session-no-redaction-20260813",
+    "sha": "00aef25",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-all-screen-insets-and-stable-signing-20260812",
+    "sha": "f4188de",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-android-edge-to-edge-insets-20260812",
+    "sha": "9d566d4",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-local-snapshot-crash-20260812",
+    "sha": "c7e948d",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-published-selected-session-flow-20260812",
+    "sha": "e85d8fb",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-release-latest-api-20260812",
+    "sha": "a8d2252",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-system-insets-and-live-session-semantics-20260812",
+    "sha": "5349dd5",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-training-state-ci-20260813",
+    "sha": "2c711ac",
+    "date": ""
+   },
+   {
+    "name": "workbench/historical-session-selection-20260812",
+    "sha": "6731de6",
+    "date": ""
+   },
+   {
+    "name": "workbench/identify-raw-package-formats-20260813",
+    "sha": "9c133ee",
+    "date": ""
+   },
+   {
+    "name": "workbench/initial-architecture-and-migration-gates-20260809",
+    "sha": "6b94eaa",
+    "date": ""
+   },
+   {
+    "name": "workbench/select-local-session-offline-20260813",
+    "sha": "6fe9f6f",
+    "date": ""
+   },
+   {
+    "name": "workbench/select-stable-session-sync-20260812",
+    "sha": "c88315c",
+    "date": ""
+   },
+   {
+    "name": "workbench/show-selected-session-state-20260813",
+    "sha": "8476b6d",
+    "date": ""
+   },
+   {
+    "name": "workbench/use-selected-session-sync-20260812",
+    "sha": "a555fa6",
+    "date": ""
+   },
+   {
+    "name": "workbench/versioned-training-state-evidence-20260813",
+    "sha": "de17c6b",
+    "date": ""
+   },
+   {
+    "name": "workbench/view-decoded-results-20260813",
+    "sha": "9c10bb7",
+    "date": ""
+   }
+  ]
+ },
+ "uma-patcher-gala": {
+  "description": "UmaPatcher-Edge 改造版 —— 适配 Best Soccer（galasports）的应用补丁器，运行时资源注入安装工具",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-10",
+  "size_kb": 8382,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "666afe5",
+    "date": ""
+   }
+  ]
+ },
+ "uma-ramen-nn-lab": {
+  "description": "拉面杯NN实验室（EXP-001~009）：MCTS+NN 决策器迭代主场，EXP-009b 冠军 66734.8 分",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 303,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "4439891",
+    "date": ""
+   },
+   {
+    "name": "workbench/ci-iterations-doc",
+    "sha": "51fb504",
+    "date": ""
+   },
+   {
+    "name": "workbench/ci-iterations-v2",
+    "sha": "46a8977",
+    "date": ""
+   },
+   {
+    "name": "workbench/distill-v1",
+    "sha": "5560207",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp008-smoke-fix1",
+    "sha": "388e1fa",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp008b-prep",
+    "sha": "a5e704b",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp008b-summary-fix",
+    "sha": "8cf8f8f",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp009-distill-v3",
+    "sha": "00302d8",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp010-model-ref-fix",
+    "sha": "756341a",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp010-selfdistill-v4",
+    "sha": "d0e47cf",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-001a-runner",
+    "sha": "4b566b5",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-001a-trigger",
+    "sha": "319aab4",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-002-assemble-fix",
+    "sha": "a618aca",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-002-hotfix-count",
+    "sha": "25f3a18",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-002-teacher",
+    "sha": "e5d2044",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-003-summary-fix",
+    "sha": "78eefee",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-003-train",
+    "sha": "952ad74",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-003b-004",
+    "sha": "0433d43",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-003b-summary-fix",
+    "sha": "571ddd7",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-004b-reclose",
+    "sha": "43cca36",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-005-gamedata-cache",
+    "sha": "20672a2",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-005-recollection",
+    "sha": "2d2fe25",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006-audit-fix",
+    "sha": "69e2117",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006-fork-baseline",
+    "sha": "59699a1",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006-ledger",
+    "sha": "200da01",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006-score-audit",
+    "sha": "993a9ff",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006b-fork-fix",
+    "sha": "af7e201",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006c-ledger",
+    "sha": "90774a2",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006c-wisdom",
+    "sha": "b62f2af",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006d-ledger",
+    "sha": "a8bf5a0",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006d-register",
+    "sha": "b735b2b",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006d-yearphased",
+    "sha": "e1eab1d",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006e-fix",
+    "sha": "97a77df",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006e-ledger",
+    "sha": "c3a3371",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006e-power",
+    "sha": "9859e85",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006f",
+    "sha": "47b43b0",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006g",
+    "sha": "dc10a3a",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006h",
+    "sha": "078d988",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006i",
+    "sha": "f7bb2e0",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006j",
+    "sha": "b2ad772",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006k",
+    "sha": "932609c",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-006l",
+    "sha": "02378af",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-007-fix",
+    "sha": "495070f",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-007-new-speed",
+    "sha": "5d493bc",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-report",
+    "sha": "5f8e92c",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-report-v2",
+    "sha": "c0d38bd",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp-report-v3",
+    "sha": "77d9e21",
+    "date": ""
+   },
+   {
+    "name": "workbench/lab-v1-charter",
+    "sha": "2a0c4a7",
+    "date": ""
+   },
+   {
+    "name": "workbench/upstream-sync-260901",
+    "sha": "4c9bb4e",
+    "date": ""
+   }
+  ]
+ },
+ "uma-ramen-nn-lab-exp010": {
+  "description": "EXP-010 自蒸馏 v4：NN 当搜索引擎评估器（009b 冠军 66734.8）——跑完归档回主仓",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 97,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "0706f84",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp010-assemble76",
+    "sha": "51c7606",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp010-fast52",
+    "sha": "82e36db",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp010-init",
+    "sha": "d8a13c4",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp010-recollect",
+    "sha": "677b12e",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp010b-fix2",
+    "sha": "3356b41",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp010b-fix-matrix",
+    "sha": "4c9004d",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp010b-verdict",
+    "sha": "3c78e22",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp011-zerocost",
+    "sha": "6897274",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp012-teacher-score",
+    "sha": "7740fde",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp012-teacher-score-v2",
+    "sha": "4c12d0b",
+    "date": ""
+   }
+  ]
+ },
+ "uma-ramen-teacher-lab": {
+  "description": "教师实验仓（EXP-013 起）：深教师 RamenMctsTrainer 首次闭环 bench——教师成绩单 #1；结论归档回 uma-ramen-nn-lab",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 134,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "418c738",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp013-hotfix-shards",
+    "sha": "edf8c2e",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp013-ledger-result",
+    "sha": "ae209ef",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp013-teacher-report-card",
+    "sha": "691fad0",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp013-v3-ucb",
+    "sha": "fdc883a",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp013-v4-budget",
+    "sha": "26d0028",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp013-v5-fixaggregation",
+    "sha": "d128520",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp014-diag",
+    "sha": "fa6aacf",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp014-fix2",
+    "sha": "3c6e910",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp014-fix4",
+    "sha": "f2d03eb",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp014-fix5",
+    "sha": "64afa49",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp014-notify",
+    "sha": "a4e6fd2",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp014-notifyfix",
+    "sha": "e0ed9ae",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp014-onpolicy",
+    "sha": "65240c6",
+    "date": ""
+   },
+   {
+    "name": "workbench/exp014-yamlfix",
+    "sha": "0c487a3",
+    "date": ""
+   }
+  ]
+ },
+ "uma-saidao-shuju": {
+  "description": "赛马娘赛道数据挖掘：140赛道静态表/天气马场抽签/技能条件DSL/末脚·焦躁·封堵·省力机制/运行时结构 dump 记录",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-10",
+  "size_kb": 67,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "e3f172b",
+    "date": ""
+   },
+   {
+    "name": "workbench/dump-20260905",
+    "sha": "b731dac",
+    "date": ""
+   }
+  ]
+ },
+ "uma-train": {
+  "description": "赛马娘AI训练框架 — MCTS+神经网络，剧本机制隔离，拉面杯模拟器已按MDB/实机截图校准",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 499,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "63fc7d9",
+    "date": ""
+   },
+   {
+    "name": "workbench/repository-purpose-audit-202608",
+    "sha": "a8dcdc8",
+    "date": ""
+   }
+  ]
+ },
+ "uma-wiki": {
+  "description": "赛马娘育成 Wiki — 机制条目与攻略整理（含 CI 校验）",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 113339,
+  "branches": [
+   {
+    "name": "gh-pages",
+    "sha": "81a91b4",
+    "date": ""
+   },
+   {
+    "name": "main",
+    "sha": "b545627",
+    "date": ""
+   },
+   {
+    "name": "workbench/repository-purpose-audit-202608",
+    "sha": "130e8dc",
+    "date": ""
+   }
+  ]
+ },
+ "uma-workbench": {
+  "description": "UMA Workbench —— 简体/繁体中文 AI 开发研究与数据分析桌面工作台（Android 端），Agent 工具链+代码查看器+深色主题",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 1369,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "7321ec0",
+    "date": ""
+   },
+   {
+    "name": "workbench/agent-partners-groups",
+    "sha": "08da315",
+    "date": ""
+   },
+   {
+    "name": "workbench/bootstrap-v0",
+    "sha": "e0148a9",
+    "date": ""
+   },
+   {
+    "name": "workbench/branch-role-ci-routing",
+    "sha": "b977ed0",
+    "date": ""
+   },
+   {
+    "name": "workbench/chat-pagination-knowledge",
+    "sha": "8160c1b",
+    "date": ""
+   },
+   {
+    "name": "workbench/endpoint-catalog",
+    "sha": "364b632",
+    "date": ""
+   },
+   {
+    "name": "workbench/integrate-github",
+    "sha": "c35539a",
+    "date": ""
+   },
+   {
+    "name": "workbench/ui-fixes-v1.5.2",
+    "sha": "e8b338d",
+    "date": ""
+   },
+   {
+    "name": "workbench/uma-features-v1",
+    "sha": "7fbf619",
+    "date": ""
+   }
+  ]
+ },
+ "uma-zmyz": {
+  "description": "赛马娘种马因子数据集 — 育成继承链路的结构化因子库",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 47,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "f8190ee",
+    "date": ""
+   },
+   {
+    "name": "workbench/data",
+    "sha": "7affe4d",
+    "date": ""
+   }
+  ]
+ },
+ "umaai-rs": {
+  "description": "UmaAi 的 Rust 重写育成 AI 主仓（上游 xulai1001）—— MCTS 育成决策 + 拉面杯策略实验与 PR 协作，37 分支 29 条实验流水线",
+  "fork": true,
+  "default": "master",
+  "updated": "2026-09-10",
+  "size_kb": 34293,
+  "branches": [
+   {
+    "name": "baseline/upstream-ramen_workbench",
+    "sha": "b25960c",
+    "date": ""
+   },
+   {
+    "name": "master",
+    "sha": "997ce74",
+    "date": ""
+   },
+   {
+    "name": "onsen_backup",
+    "sha": "0d3d4f5",
+    "date": ""
+   },
+   {
+    "name": "ramen_workbench",
+    "sha": "2a60340",
+    "date": ""
+   },
+   {
+    "name": "upstream",
+    "sha": "c65fdaa",
+    "date": ""
+   },
+   {
+    "name": "workbench/actual-card-combinations",
+    "sha": "c2602ad",
+    "date": ""
+   },
+   {
+    "name": "workbench/backup-pre-upstream-sync",
+    "sha": "c9dccbe",
+    "date": ""
+   },
+   {
+    "name": "workbench/bench-card-compositions",
+    "sha": "9c29d74",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-ramen-gauge-count",
+    "sha": "e7b52b1",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-ramen-gauge-count-v2",
+    "sha": "62dacd5",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-ramen-player-main-upstream-pr",
+    "sha": "c6c15c7",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-ramen-source-lock",
+    "sha": "bb78380",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-y3-composition-region-matrix",
+    "sha": "09a723a",
+    "date": ""
+   },
+   {
+    "name": "workbench/flat-search-warning-cleanup",
+    "sha": "62be436",
+    "date": ""
+   },
+   {
+    "name": "workbench/format-compositions",
+    "sha": "6b47174",
+    "date": ""
+   },
+   {
+    "name": "workbench/port-local-ramen-strategy",
+    "sha": "af43b96",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-aligned-20260826",
+    "sha": "e33cdce",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-improve-1",
+    "sha": "032c933",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-mcts-iteration",
+    "sha": "eb7b4d2",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-mine-plan",
+    "sha": "2623eed",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-strategy-clean",
+    "sha": "a716f4b",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-strategy-consolidated",
+    "sha": "e75b85c",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-strategy-final",
+    "sha": "a29f98d",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-strategy-pr",
+    "sha": "52368be",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-strategy-pr-clean",
+    "sha": "7377ce2",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-strategy-pr-final",
+    "sha": "e0ddafd",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-strategy-pr-v2",
+    "sha": "294ce88",
+    "date": ""
+   },
+   {
+    "name": "workbench/ramen-workbench-pr-test",
+    "sha": "e62a92e",
+    "date": ""
+   },
+   {
+    "name": "workbench/resolve-upstream-ramen-20260826",
+    "sha": "cbc3022",
+    "date": ""
+   },
+   {
+    "name": "workbench/skill-pt-matrix-distill",
+    "sha": "784b028",
+    "date": ""
+   },
+   {
+    "name": "workbench/sync-upstream-ramen-20260826",
+    "sha": "b25960c",
+    "date": ""
+   },
+   {
+    "name": "workbench/upstream-pr-ramen-player-features",
+    "sha": "25f2c91",
+    "date": ""
+   },
+   {
+    "name": "workbench/validate-flat-search-cleanup",
+    "sha": "a0de2b8",
+    "date": ""
+   },
+   {
+    "name": "workbench/y3-region-combination-matrix",
+    "sha": "8f071f3",
+    "date": ""
+   },
+   {
+    "name": "workbench/y3-region-matrix-corrected",
+    "sha": "63f42f8",
+    "date": ""
+   },
+   {
+    "name": "workbench/101x120-upstream-ramen",
+    "sha": "3e06600",
+    "date": ""
+   },
+   {
+    "name": "workbench/101x120-upstream-ramen-v2",
+    "sha": "662489f",
+    "date": ""
+   }
+  ]
+ },
+ "umaai-rs-fanfix": {
+  "description": "粉丝数达标判定修复实验仓（独立于 umaai-rs-fanskip，避免与另一 AI 冲突）— 上游 xulai1001/umaai-rs",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-12",
+  "size_kb": 2953,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "91216ae",
+    "date": ""
+   },
+   {
+    "name": "master",
+    "sha": "3798ed3",
+    "date": ""
+   },
+   {
+    "name": "workbench/fanfix-0",
+    "sha": "9a439bc",
+    "date": ""
+   },
+   {
+    "name": "workbench/fanfix-1",
+    "sha": "9ef626d",
+    "date": ""
+   },
+   {
+    "name": "workbench/fanfix-2",
+    "sha": "86e0344",
+    "date": ""
+   },
+   {
+    "name": "workbench/overflow-repro",
+    "sha": "3c2f399",
+    "date": ""
+   },
+   {
+    "name": "workbench/slack-fix-v2",
+    "sha": "da49903",
+    "date": ""
+   }
+  ]
+ },
+ "umaai-rs-fanskip": {
+  "description": "umaai-rs 粉丝跳过版 — 真机 AI 可配置跳过自选比赛达标判定（fanskip），模拟器/bench 基准不变；上游 xulai1001/umaai-rs",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-12",
+  "size_kb": 34147,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "39268e9",
+    "date": ""
+   }
+  ]
+ },
+ "umahachimios": {
+  "description": "UmachimiOS 安装器 so 插件 — Hachimi 系安装器辅助插件",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-09-09",
+  "size_kb": 44,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "551627b",
+    "date": ""
+   },
+   {
+    "name": "workbench/repository-purpose-audit-202608",
+    "sha": "f089ef0",
+    "date": ""
+   }
+  ]
+ },
+ "umamusume-mechanics-archive": {
+  "description": "赛马娘育成机制、协议原始证据、运行时观察与消息审计的私人规范化归档",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-08-17",
+  "size_kb": 36,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "55f31e9",
+    "date": ""
+   },
+   {
+    "name": "workbench/add-android-keychain-credential-20260816",
+    "sha": "ffd480b",
+    "date": ""
+   },
+   {
+    "name": "workbench/initial-classification-20260816",
+    "sha": "21b3e32",
+    "date": ""
+   },
+   {
+    "name": "workbench/localize-credential-snapshot-zh-20260816",
+    "sha": "f85d1a3",
+    "date": ""
+   },
+   {
+    "name": "workbench/second-audit-old-repository-20260816",
+    "sha": "febc1c4",
+    "date": ""
+   },
+   {
+    "name": "workbench/swimsuit-seiun-raw-session-20260816",
+    "sha": "c124d56",
+    "date": ""
+   }
+  ]
+ },
+ "umamusume-scenario-mechanics": {
+  "description": "赛马娘全育成剧本机制、协议接口、响应结构、MDB与运行时证据文档库（不含软件和游戏二进制）",
+  "fork": false,
+  "default": "main",
+  "updated": "2026-08-14",
+  "size_kb": 692,
+  "branches": [
+   {
+    "name": "main",
+    "sha": "b63c138",
+    "date": ""
+   },
+   {
+    "name": "workbench/add-hereditary-factor-and-noninherit-skill-gates-20260806",
+    "sha": "2481409",
+    "date": ""
+   },
+   {
+    "name": "workbench/anti-cheat-investigation-20260816",
+    "sha": "4ae6387",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-algorithm-weight-allocation-20260805",
+    "sha": "375a467",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-checkpoint-passive-composition-20260806",
+    "sha": "6812385",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-checkpoint-passive-value-bands-20260806",
+    "sha": "73cef1e",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-complete-rank-thresholds-20260806",
+    "sha": "8cfe532",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-cross-track-race-compat-20260806",
+    "sha": "bd2f7bf",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-eight-air-groove-runtime-results-20260807",
+    "sha": "9968fcb",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-endpoint-pre-release-audit-20260806",
+    "sha": "be1fc33",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-endpoint-release-gate-g-20260806",
+    "sha": "16a8f8a",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-evaluation-rank-enum-and-server-boundary-20260806",
+    "sha": "8b5b6ab",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-factor-id-rarity-consumer-semantics-20260807",
+    "sha": "53bdf73",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-factor-probability-persistence-plan-20260806",
+    "sha": "d13eb0a",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-generated-succession-l-v3279-20260807",
+    "sha": "c748282",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-green-card-disassembly-boundary-20260814",
+    "sha": "25f6908",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-green-card-request-input-boundary-20260814",
+    "sha": "75de879",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-green-card-server-boundary-proper-weight-20260814",
+    "sha": "b1c6165",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-green-card-weight-audit-20260807",
+    "sha": "2d4965c",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-il2cpp-object-endpoints-green-proper-20260814",
+    "sha": "d111d07",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-il2cpp-ramen-invoke-findings-20260806",
+    "sha": "13d6d3c",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-inherit-pair-compat-endpoint-20260806",
+    "sha": "db173c5",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-jbc-cross-track-race-compat-20260806",
+    "sha": "ad5f123",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-live-event-reward-findings",
+    "sha": "e61912d",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-manual-training-protocol-20260816",
+    "sha": "0bd06b6",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-nested-logic-hit-checkpoint-20260805",
+    "sha": "ac5c3e4",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-normal-training-vs-green-card-factor-chain-20260807",
+    "sha": "885465c",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-parent-runtime-semantics-j-20260806",
+    "sha": "297c4f1",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-protocol-account-identity-gacha-20260807",
+    "sha": "4440913",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ramen-330pt-formula-20260808",
+    "sha": "79db61c",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ramen-checkpoint-point-simulation-passive-effects-20260806",
+    "sha": "fc5488c",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ramen-command-delta-packet-proof-20260809",
+    "sha": "f868655",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ramen-complete-session-finish-20260808",
+    "sha": "e21826a",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ramen-delta-floor-formula-20260809",
+    "sha": "a8f9017",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ramen-region-combination-cache-20260806",
+    "sha": "21b077a",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ramen-special-feeling-overflow-reminder-20260806",
+    "sha": "8d16677",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ramen-ui-category-source-split-20260808",
+    "sha": "a25f62b",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ramen-ui-text-source-20260807",
+    "sha": "95f4d60",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ramen-uraf-endpoint-trace-20260806",
+    "sha": "cec7f99",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-region-priority-and-training-formula-20260805",
+    "sha": "b451a48",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-response-headers-h-20260806",
+    "sha": "49fa139",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-result-response-and-skill-grade-20260806",
+    "sha": "25cb2d1",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-rmjpt-reset-and-evaluation-first-batch-20260806",
+    "sha": "9030500",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-roster-priority-and-training-formula-20260805",
+    "sha": "933f8af",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-selected-parent-multisource-20260806",
+    "sha": "8053300",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-selected-parent-runtime-endpoint-20260806",
+    "sha": "c9823ee",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-so-persistent-storage-endpoints-20260806",
+    "sha": "780deee",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-so-unified-endpoint-a-build-20260806",
+    "sha": "8aff158",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-so-v3275-release-20260806",
+    "sha": "21c55ed",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-so-v3277-cumulative-aj-release-20260806",
+    "sha": "120c95e",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-so-v32711-release-20260808",
+    "sha": "9708d0b",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-swimsuit-seiun-465-session-20260811",
+    "sha": "1553f90",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-training-ramen-rng-chains-20260805",
+    "sha": "c8e963f",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-umaai-onnx-weight-discovery-20260808",
+    "sha": "ba55643",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-unified-k-build-20260807",
+    "sha": "5d6fd98",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-ura-support-roster-effect-20260805",
+    "sha": "2455ff6",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-v3276-release-20260806",
+    "sha": "1f45638",
+    "date": ""
+   },
+   {
+    "name": "workbench/archive-v3277-game-update-smoke-20260806",
+    "sha": "689963f",
+    "date": ""
+   },
+   {
+    "name": "workbench/audit-pre-mechanics-projects-20260806",
+    "sha": "e58619e",
+    "date": ""
+   },
+   {
+    "name": "workbench/audit-ramen-semantic-clarity-20260806",
+    "sha": "faf7aed",
+    "date": ""
+   },
+   {
+    "name": "workbench/complete-checkpoint-point-value-formulas-20260806",
+    "sha": "a982eae",
+    "date": ""
+   },
+   {
+    "name": "workbench/correct-factor-color-and-unique-skill-semantics-20260806",
+    "sha": "c432ebc",
+    "date": ""
+   },
+   {
+    "name": "workbench/correct-factor-research-scope-20260807",
+    "sha": "9610670",
+    "date": ""
+   },
+   {
+    "name": "workbench/correct-scope-and-scenario-boundaries",
+    "sha": "486671e",
+    "date": ""
+   },
+   {
+    "name": "workbench/correct-special-feeling-simulation-formula-20260806",
+    "sha": "8b2f592",
+    "date": ""
+   },
+   {
+    "name": "workbench/fix-ramen-p0-and-checkpoint-semantics-20260806",
+    "sha": "a897692",
+    "date": ""
+   },
+   {
+    "name": "workbench/initial-knowledge-base",
+    "sha": "10ebccd",
+    "date": ""
+   },
+   {
+    "name": "workbench/package-ramen-folder-20260807",
+    "sha": "b5b499f",
+    "date": ""
+   },
+   {
+    "name": "workbench/refine-finish-response-boundary-20260806",
+    "sha": "4ade909",
+    "date": ""
+   },
+   {
+    "name": "workbench/separate-trained-chara-evaluation-system-20260806",
+    "sha": "44d4263",
+    "date": ""
+   },
+   {
+    "name": "workbench/update-green-card-static-call-chain-20260814",
+    "sha": "6165462",
+    "date": ""
+   }
+  ]
+ }
+}

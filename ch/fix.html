@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🩹 修复语义 · 花落仓库语义手册</title>
+<style>
+:root{--bg:#0f1419;--card:#1a2129;--card2:#212a35;--line:#2d3743;--txt:#e6e9ed;--sub:#9aa7b4;
+--acc:#5eb1ff;--acc2:#ffd166;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--hold:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;font-size:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+h1{font-size:1.9em;margin:12px 0 6px}h2{font-size:1.35em;margin:34px 0 12px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:1.12em;margin:22px 0 8px;color:var(--acc2)}
+p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
+.nav{position:sticky;top:0;z-index:9;background:rgba(15,20,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
+.nav b{color:var(--acc2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.repo-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .12s}
+.repo-card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.repo-card .name{font-weight:700;font-size:1.05em}
+.repo-card .desc{color:var(--sub);font-size:.9em;margin:6px 0}
+.tag{display:inline-block;padding:1px 9px;border-radius:20px;font-size:.78em;margin-right:5px;border:1px solid var(--line);color:var(--sub)}
+.tag.hot{color:var(--acc2);border-color:var(--acc2)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--card2)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.hold{color:var(--hold)}
+.callout{border-left:4px solid var(--warn);background:rgba(251,191,36,.07);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.danger{border-color:var(--bad);background:rgba(248,113,113,.07)}
+.callout.info{border-color:var(--acc);background:rgba(94,177,255,.07)}
+.big-num{font-size:2em;font-weight:800;color:var(--acc2)}
+footer{margin-top:60px;color:var(--sub);font-size:.85em;border-top:1px solid var(--line);padding-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.9em}
+br-table{display:block;overflow-x:auto}
+@media print{.nav{position:static}body{background:#fff;color:#000}}
+</style></head><body>
+<div class="nav"><b>语义手册</b> <a href="../index.html">🏠 总入口</a> <a href="ch/player.html">👤 玩家语义</a> <a href="ch/game.html">🎮 游戏语义</a> <a href="ch/code.html">🛠️ 代码维护语义</a> <a href="ch/fix.html">🩹 修复语义</a> <a href="ch/compat.html">🔗 兼容性语义</a> <a href="ch/bugfix.html">🐛 修 Bug 维护语义</a> <a href="ch/pr.html">📬 PR 语义</a> <a href="ch/glossary.html">📖 术语白话对照表</a> <a href="../index.html#repos">📦 仓库地图</a></div>
+<div class="wrap"><p><a href="../index.html">← 回总入口</a></p>
+<h1>🩹 修复语义</h1>
+<p style="color:var(--sub)">补丁、臂、判词、转正——修东西的黑话全解，附刚出炉的 v10 判词。</p>
+
+<h2>一次修复的完整生命周期</h2>
+<div class="card">
+<p><b>发现症状 → 定位病灶 → 写补丁（默认关）→ bench 加臂 → 同种子 A/B → 出判词 → 转正或放弃</b></p>
+<p>关键词解释：</p>
+<ul>
+<li><b>补丁</b>：一小段改动文件。平时关着，主代码逐位不变；带 token 跑才生效</li>
+<li><b>臂</b>：bench 里的一个参赛版本。一次改一个变量，才知道分数变化归谁</li>
+<li><b>判词</b>：测试后的官方结论，写进 docs/，<b>判死不翻案</b></li>
+<li><b>转正</b>：补丁合入主线（走 0005 式流程）</li>
+<li><b>留观</b>：有微弱信号，记下来下次再测</li>
+</ul>
+</div>
+
+<h2>现有补丁家谱</h2>
+<table>
+<tr><th>补丁</th><th>干什么</th><th>判词</th></tr>
+<tr><td>0001 rclamp</td><td>体力储备惩罚的增益钳制</td><td class="ok">已转正（成为 0005）</td></tr>
+<tr><td>0002</td><td>早期实验</td><td class="warn">未进链</td></tr>
+<tr><td>0003 vcurve</td><td>体力价值曲线软化</td><td class="bad">判死：亏损不来自降到几，而来自软化本身（保护性先验，不翻案）</td></tr>
+<tr><td>0004 rera</td><td>储备分年代系数</td><td class="hold">中性（零翻转）</td></tr>
+<tr><td>0006 capf25</td><td>上限折扣地板</td><td class="hold">噪声内偏负，无信号</td></tr>
+<tr><td>0007 restdamp</td><td>休息按年份衰减</td><td class="hold">零翻转——打分层休息定价作用域错位</td></tr>
+<tr><td>0008 slack20</td><td>选择层上限放宽 20（记账仍诚实）</td><td class="ok">唯一非负+弱信号（+4.4 分），留观 slack40</td></tr>
+</table>
+
+<h2>v10 九臂判词（2026-09-13 刚出）</h2>
+<table>
+<tr><th>臂</th><th>均分</th><th>对比 A</th><th>一句话</th></tr>
+<tr><td>A-preset(转正)</td><td>64271.5</td><td>—</td><td>基准</td></tr>
+<tr><td>B-rclamp</td><td>64271.5</td><td>0</td><td>和 A 逐位相同（转正自检通过）</td></tr>
+<tr><td>C-vcurve / D-both / E-vcurve30</td><td>~64060</td><td class="bad">−0.32%~−0.34%</td><td>判死维持，不翻案</td></tr>
+<tr><td>F-rera</td><td>64271.5</td><td>0</td><td>零翻转，中性</td></tr>
+<tr><td>G-capf25</td><td>64212.7</td><td class="bad">−0.09%</td><td>噪声带内，无信号</td></tr>
+<tr><td>H-restdamp</td><td>64271.5</td><td>0</td><td>零翻转（打分层休息仅 0.01 次/局）</td></tr>
+<tr><td>I-slack20</td><td>64275.9</td><td class="ok">+0.007%</td><td>唯一非负，留观</td></tr>
+</table>
+<div class="callout info"><b>总判词：</b>手写评分层的单点调参已全面收敛——纯错误已修完，剩余变量的整局边际收益趋零。<b>下一步的增量不在打分层参数，在蒸馏与搜索侧</b>（先把教师修好，见 uma-ramen-teacher-lab）。</div>
+
+<h2>为什么"方向错了还有提升"</h2>
+<div class="card">
+<p>提升有两种：<b>止损型</b>（填坑，方向无关）和 <b>开疆型</b>（找到更好的走法，方向有关）。</p>
+<p>之前的提升全是止损型：悬崖双重收费每次罚 1149 分，修掉它任何方向都涨。v10 判词证明开疆型在手写调参里已经没有了（四个臂零变化）。真正的开疆要靠神经网络+搜索迭代（72000/76000 那个量级）。</p>
+</div>
+<footer>花落仓库语义手册 · 生成于 2026-09-13 · 全部页面互相跳转，直接存放在 GitHub 仓库内，免积分查看。<br>
+维护方法：改 <code>semantic_atlas/gen_atlas.py</code> 里的文字，重新运行生成，推送到 repo-atlas 仓库。</footer>
+</div></body></html>

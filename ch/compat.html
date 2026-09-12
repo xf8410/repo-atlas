@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🔗 兼容性语义 · 花落仓库语义手册</title>
+<style>
+:root{--bg:#0f1419;--card:#1a2129;--card2:#212a35;--line:#2d3743;--txt:#e6e9ed;--sub:#9aa7b4;
+--acc:#5eb1ff;--acc2:#ffd166;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--hold:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;font-size:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+h1{font-size:1.9em;margin:12px 0 6px}h2{font-size:1.35em;margin:34px 0 12px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:1.12em;margin:22px 0 8px;color:var(--acc2)}
+p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
+.nav{position:sticky;top:0;z-index:9;background:rgba(15,20,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
+.nav b{color:var(--acc2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.repo-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .12s}
+.repo-card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.repo-card .name{font-weight:700;font-size:1.05em}
+.repo-card .desc{color:var(--sub);font-size:.9em;margin:6px 0}
+.tag{display:inline-block;padding:1px 9px;border-radius:20px;font-size:.78em;margin-right:5px;border:1px solid var(--line);color:var(--sub)}
+.tag.hot{color:var(--acc2);border-color:var(--acc2)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--card2)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.hold{color:var(--hold)}
+.callout{border-left:4px solid var(--warn);background:rgba(251,191,36,.07);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.danger{border-color:var(--bad);background:rgba(248,113,113,.07)}
+.callout.info{border-color:var(--acc);background:rgba(94,177,255,.07)}
+.big-num{font-size:2em;font-weight:800;color:var(--acc2)}
+footer{margin-top:60px;color:var(--sub);font-size:.85em;border-top:1px solid var(--line);padding-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.9em}
+br-table{display:block;overflow-x:auto}
+@media print{.nav{position:static}body{background:#fff;color:#000}}
+</style></head><body>
+<div class="nav"><b>语义手册</b> <a href="../index.html">🏠 总入口</a> <a href="ch/player.html">👤 玩家语义</a> <a href="ch/game.html">🎮 游戏语义</a> <a href="ch/code.html">🛠️ 代码维护语义</a> <a href="ch/fix.html">🩹 修复语义</a> <a href="ch/compat.html">🔗 兼容性语义</a> <a href="ch/bugfix.html">🐛 修 Bug 维护语义</a> <a href="ch/pr.html">📬 PR 语义</a> <a href="ch/glossary.html">📖 术语白话对照表</a> <a href="../index.html#repos">📦 仓库地图</a></div>
+<div class="wrap"><p><a href="../index.html">← 回总入口</a></p>
+<h1>🔗 兼容性语义</h1>
+<p style="color:var(--sub)">怎么保证新改动不弄坏旧东西。</p>
+
+<h2>第一原则：默认关 = 逐位不变</h2>
+<div class="card">
+<p>所有补丁默认不生效。不带 token 跑，程序的行为和打补丁前 <b>一个比特都不差</b>。这保证了：主干永远是可信的基准，任何实验都不污染它。</p>
+<p>自检方法：bench 里 A 臂（不带 token）和旧基准逐位对比，分数必须完全相等。v10 里 A≡B≡F≡H 四臂等值，就是这个自检。</p>
+</div>
+
+<h2>上游关系</h2>
+<div class="card">
+<ul>
+<li>我们的代码上游是 <b>xulai1001/umaai-rs</b>（别人写的原版）。我们是 fork/实验，<b>不往上游推东西</b></li>
+<li>上游更新时走 sync 分支对齐（umaai-rs 有一堆 workbench/sync-* 和 workbench/101x120-upstream-ramen 分支，都是干这个的）</li>
+<li>机制知识的上游是实机数据：所有游戏机制必须从游戏包原始文件、内存 dump、master.mdb 实测里来，<b>禁止脑补游戏机制</b></li>
+</ul>
+</div>
+
+<h2>接口兼容三查</h2>
+<ol>
+<li><b>加字段用默认值</b>：新配置项必须有默认值，且默认值=旧行为（比如 cap_discount_floor 默认 0.0 = 不生效）</li>
+<li><b>不删不改已有 token 含义</b>：旧 token 的行为冻结，新想法开新 token</li>
+<li><b>计价诚实</b>：选择层可以看得宽松，但游戏入账层永远按真实规则截断（0008 补丁就是这么做的）</li>
+</ol>
+
+<h2>数据文件兼容</h2>
+<div class="callout"><b>规则：</b>master.mdb 等游戏数据表更新时，先比对结构再换；训练数据（状态、策略、价值三元组）的格式改动必须在 uma-data 里留版本记录。三个模块（比赛模拟器/育成模拟器/训练数据）互相独立，<b>禁止跨模块混逻辑</b>。</div>
+<footer>花落仓库语义手册 · 生成于 2026-09-13 · 全部页面互相跳转，直接存放在 GitHub 仓库内，免积分查看。<br>
+维护方法：改 <code>semantic_atlas/gen_atlas.py</code> 里的文字，重新运行生成，推送到 repo-atlas 仓库。</footer>
+</div></body></html>

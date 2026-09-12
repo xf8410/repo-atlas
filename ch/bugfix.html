@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🐛 修 Bug 维护语义 · 花落仓库语义手册</title>
+<style>
+:root{--bg:#0f1419;--card:#1a2129;--card2:#212a35;--line:#2d3743;--txt:#e6e9ed;--sub:#9aa7b4;
+--acc:#5eb1ff;--acc2:#ffd166;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--hold:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;font-size:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+h1{font-size:1.9em;margin:12px 0 6px}h2{font-size:1.35em;margin:34px 0 12px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:1.12em;margin:22px 0 8px;color:var(--acc2)}
+p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
+.nav{position:sticky;top:0;z-index:9;background:rgba(15,20,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
+.nav b{color:var(--acc2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.repo-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .12s}
+.repo-card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.repo-card .name{font-weight:700;font-size:1.05em}
+.repo-card .desc{color:var(--sub);font-size:.9em;margin:6px 0}
+.tag{display:inline-block;padding:1px 9px;border-radius:20px;font-size:.78em;margin-right:5px;border:1px solid var(--line);color:var(--sub)}
+.tag.hot{color:var(--acc2);border-color:var(--acc2)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--card2)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.hold{color:var(--hold)}
+.callout{border-left:4px solid var(--warn);background:rgba(251,191,36,.07);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.danger{border-color:var(--bad);background:rgba(248,113,113,.07)}
+.callout.info{border-color:var(--acc);background:rgba(94,177,255,.07)}
+.big-num{font-size:2em;font-weight:800;color:var(--acc2)}
+footer{margin-top:60px;color:var(--sub);font-size:.85em;border-top:1px solid var(--line);padding-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.9em}
+br-table{display:block;overflow-x:auto}
+@media print{.nav{position:static}body{background:#fff;color:#000}}
+</style></head><body>
+<div class="nav"><b>语义手册</b> <a href="../index.html">🏠 总入口</a> <a href="ch/player.html">👤 玩家语义</a> <a href="ch/game.html">🎮 游戏语义</a> <a href="ch/code.html">🛠️ 代码维护语义</a> <a href="ch/fix.html">🩹 修复语义</a> <a href="ch/compat.html">🔗 兼容性语义</a> <a href="ch/bugfix.html">🐛 修 Bug 维护语义</a> <a href="ch/pr.html">📬 PR 语义</a> <a href="ch/glossary.html">📖 术语白话对照表</a> <a href="../index.html#repos">📦 仓库地图</a></div>
+<div class="wrap"><p><a href="../index.html">← 回总入口</a></p>
+<h1>🐛 修 Bug 维护语义</h1>
+<p style="color:var(--sub)">复现、种子、世界线——抓虫子的纪律，和一次丢 2798 个文件的惨痛教训。</p>
+
+<h2>修 bug 五步</h2>
+<div class="card">
+<ol>
+<li><b>先复现，再谈修</b>：复现不了就先解决复现，别猜</li>
+<li><b>固定种子</b>：用固定种子把问题局面录下来，可以一遍遍重放（这叫固定世界线）</li>
+<li><b>最小化</b>：把触发条件削到最少</li>
+<li><b>写补丁、默认关</b>：修复也要走补丁流，带开关</li>
+<li><b>回归验证</b>：修完跑一遍 bench，确认没伤及无辜（分数大盘不能无故掉）</li>
+</ol>
+</div>
+
+<h2>复现难怎么办</h2>
+<div class="callout"><b>真实案例：</b>之前有个局面，CI 里迭代了三次才复现出来。复现难 ≠ 不能修，而是：① 把复现过程本身固化成种子+脚本，写进 CI；② 复现脚本就是修复的验收标准。复现脚本丢了，修复就等于没做。</div>
+
+<h2>2798 个文件失踪案（必读教训）</h2>
+<div class="card">
+<p><b>案情：</b>泳装青云天空一局完整育成的抓包数据（465 对请求响应，2798 个文件），当年用 API 一个个传到了 GitHub，<b>但只建了 blob、从没提交进任何分支的 tree</b>。这种文件叫"悬空 blob"，GitHub 约两周自动回收。2026-08-16 审计发现时已无力回天。</p>
+<p><b>教训：</b></p>
+<ul>
+<li>上传 ≠ 保存。<b>提交进分支、能在文件页看到，才算保存</b></li>
+<li>大批量文件归档，传完立即验证：文件数、总字节、抽查内容三件套</li>
+<li>不可替代的原始数据（抓包、dump）至少存两处：GitHub + 云盘/手机</li>
+</ul>
+<p><b>现状：</b>索引和公式闭环书还在（见 <a href="../repos/hlpatch-observation-architecture.html">hlpatch-observation-architecture</a>），源文件还在手机上（/data/user/0/jp.co.cygames.umamusume/files/hlpatch-observations），想恢复就用 hlpatch 重新导出。</p>
+</div>
+
+<h2>验证铁律</h2>
+<ul>
+<li><span class="bad">大文件交付前必须全量内容校验</span>——只验结构不验内容等于没验</li>
+<li>改策略打分类代码，旧基准分数作废重跑，不拿旧分数比</li>
+<li>禁止未验证的全量批量修改：跨多处的替换必须逐个验证再合并</li>
+</ul>
+<footer>花落仓库语义手册 · 生成于 2026-09-13 · 全部页面互相跳转，直接存放在 GitHub 仓库内，免积分查看。<br>
+维护方法：改 <code>semantic_atlas/gen_atlas.py</code> 里的文字，重新运行生成，推送到 repo-atlas 仓库。</footer>
+</div></body></html>

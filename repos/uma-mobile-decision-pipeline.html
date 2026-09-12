@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>uma-mobile-decision-pipeline · 花落仓库语义手册</title>
+<style>
+:root{--bg:#0f1419;--card:#1a2129;--card2:#212a35;--line:#2d3743;--txt:#e6e9ed;--sub:#9aa7b4;
+--acc:#5eb1ff;--acc2:#ffd166;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--hold:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;font-size:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+h1{font-size:1.9em;margin:12px 0 6px}h2{font-size:1.35em;margin:34px 0 12px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:1.12em;margin:22px 0 8px;color:var(--acc2)}
+p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
+.nav{position:sticky;top:0;z-index:9;background:rgba(15,20,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
+.nav b{color:var(--acc2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.repo-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .12s}
+.repo-card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.repo-card .name{font-weight:700;font-size:1.05em}
+.repo-card .desc{color:var(--sub);font-size:.9em;margin:6px 0}
+.tag{display:inline-block;padding:1px 9px;border-radius:20px;font-size:.78em;margin-right:5px;border:1px solid var(--line);color:var(--sub)}
+.tag.hot{color:var(--acc2);border-color:var(--acc2)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--card2)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.hold{color:var(--hold)}
+.callout{border-left:4px solid var(--warn);background:rgba(251,191,36,.07);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.danger{border-color:var(--bad);background:rgba(248,113,113,.07)}
+.callout.info{border-color:var(--acc);background:rgba(94,177,255,.07)}
+.big-num{font-size:2em;font-weight:800;color:var(--acc2)}
+footer{margin-top:60px;color:var(--sub);font-size:.85em;border-top:1px solid var(--line);padding-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.9em}
+br-table{display:block;overflow-x:auto}
+@media print{.nav{position:static}body{background:#fff;color:#000}}
+</style></head><body>
+<div class="nav"><b>语义手册</b> <a href="../index.html">🏠 总入口</a> <a href="ch/player.html">👤 玩家语义</a> <a href="ch/game.html">🎮 游戏语义</a> <a href="ch/code.html">🛠️ 代码维护语义</a> <a href="ch/fix.html">🩹 修复语义</a> <a href="ch/compat.html">🔗 兼容性语义</a> <a href="ch/bugfix.html">🐛 修 Bug 维护语义</a> <a href="ch/pr.html">📬 PR 语义</a> <a href="ch/glossary.html">📖 术语白话对照表</a> <a href="../index.html#repos">📦 仓库地图</a></div>
+<div class="wrap"><p><a href="../index.html">← 回总入口</a> / <a href="https://github.com/xf8410/uma-mobile-decision-pipeline" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p>
+<h1>📦 uma-mobile-decision-pipeline</h1>
+<p>手机端采集流水线：Session 同步+MessagePack 解码+上传决策链路。</p>
+<p><span class="tag">23 个分支</span><span class="tag">默认分支 main</span><span class="tag">约 0MB</span><span class="tag">最近更新 2026-09-09</span></p>
+
+<h2>分支清单（按最近活跃排序）</h2>
+<div style="overflow-x:auto"><table>
+<tr><th>分支</th><th>大白话注释</th><th>最近提交</th><th>链接</th></tr>
+<tr><td><b>main</b></td><td>主干分支：这个仓库的正式版本</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/main' target='_blank' rel='noopener noreferrer'>69e87a3 ↗</a></td></tr><tr><td><b>workbench/bootstrap-kotlin-collector-20260812</b></td><td>工作台实验分支：测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/bootstrap-kotlin-collector-20260812' target='_blank' rel='noopener noreferrer'>7bc6bf9 ↗</a></td></tr><tr><td><b>workbench/complete-json-support-20260813</b></td><td>工作台实验分支：测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/complete-json-support-20260813' target='_blank' rel='noopener noreferrer'>0d28aad ↗</a></td></tr><tr><td><b>workbench/complete-training-state-validation-20260814</b></td><td>工作台实验分支：测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/complete-training-state-validation-20260814' target='_blank' rel='noopener noreferrer'>ea22e42 ↗</a></td></tr><tr><td><b>workbench/decode-raw-packages-to-json-20260813</b></td><td>工作台实验分支：测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/decode-raw-packages-to-json-20260813' target='_blank' rel='noopener noreferrer'>0e4248f ↗</a></td></tr><tr><td><b>workbench/derive-training-state-evidence-20260813</b></td><td>工作台实验分支：测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/derive-training-state-evidence-20260813' target='_blank' rel='noopener noreferrer'>c71421f ↗</a></td></tr><tr><td><b>workbench/export-complete-session-no-redaction-20260813</b></td><td>工作台实验分支：测试场、会话归档</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/export-complete-session-no-redaction-20260813' target='_blank' rel='noopener noreferrer'>00aef25 ↗</a></td></tr><tr><td><b>workbench/fix-all-screen-insets-and-stable-signing-20260812</b></td><td>工作台实验分支：修复类、测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/fix-all-screen-insets-and-stable-signing-20260812' target='_blank' rel='noopener noreferrer'>f4188de ↗</a></td></tr><tr><td><b>workbench/fix-android-edge-to-edge-insets-20260812</b></td><td>工作台实验分支：修复类、测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/fix-android-edge-to-edge-insets-20260812' target='_blank' rel='noopener noreferrer'>9d566d4 ↗</a></td></tr><tr><td><b>workbench/fix-local-snapshot-crash-20260812</b></td><td>工作台实验分支：修复类、测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/fix-local-snapshot-crash-20260812' target='_blank' rel='noopener noreferrer'>c7e948d ↗</a></td></tr><tr><td><b>workbench/fix-published-selected-session-flow-20260812</b></td><td>工作台实验分支：修复类、测试场、会话归档</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/fix-published-selected-session-flow-20260812' target='_blank' rel='noopener noreferrer'>e85d8fb ↗</a></td></tr><tr><td><b>workbench/fix-release-latest-api-20260812</b></td><td>工作台实验分支：修复类、测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/fix-release-latest-api-20260812' target='_blank' rel='noopener noreferrer'>a8d2252 ↗</a></td></tr><tr><td><b>workbench/fix-system-insets-and-live-session-semantics-20260812</b></td><td>工作台实验分支：修复类、测试场、会话归档</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/fix-system-insets-and-live-session-semantics-20260812' target='_blank' rel='noopener noreferrer'>5349dd5 ↗</a></td></tr><tr><td><b>workbench/fix-training-state-ci-20260813</b></td><td>工作台实验分支：修复类、测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/fix-training-state-ci-20260813' target='_blank' rel='noopener noreferrer'>2c711ac ↗</a></td></tr><tr><td><b>workbench/historical-session-selection-20260812</b></td><td>工作台实验分支：测试场、会话归档</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/historical-session-selection-20260812' target='_blank' rel='noopener noreferrer'>6731de6 ↗</a></td></tr><tr><td><b>workbench/identify-raw-package-formats-20260813</b></td><td>工作台实验分支：测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/identify-raw-package-formats-20260813' target='_blank' rel='noopener noreferrer'>9c133ee ↗</a></td></tr><tr><td><b>workbench/initial-architecture-and-migration-gates-20260809</b></td><td>工作台实验分支：测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/initial-architecture-and-migration-gates-20260809' target='_blank' rel='noopener noreferrer'>6b94eaa ↗</a></td></tr><tr><td><b>workbench/select-local-session-offline-20260813</b></td><td>工作台实验分支：测试场、会话归档</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/select-local-session-offline-20260813' target='_blank' rel='noopener noreferrer'>6fe9f6f ↗</a></td></tr><tr><td><b>workbench/select-stable-session-sync-20260812</b></td><td>工作台实验分支：同步上游、测试场、会话归档</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/select-stable-session-sync-20260812' target='_blank' rel='noopener noreferrer'>c88315c ↗</a></td></tr><tr><td><b>workbench/show-selected-session-state-20260813</b></td><td>工作台实验分支：测试场、会话归档</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/show-selected-session-state-20260813' target='_blank' rel='noopener noreferrer'>8476b6d ↗</a></td></tr><tr><td><b>workbench/use-selected-session-sync-20260812</b></td><td>工作台实验分支：同步上游、测试场、会话归档</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/use-selected-session-sync-20260812' target='_blank' rel='noopener noreferrer'>a555fa6 ↗</a></td></tr><tr><td><b>workbench/versioned-training-state-evidence-20260813</b></td><td>工作台实验分支：测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/versioned-training-state-evidence-20260813' target='_blank' rel='noopener noreferrer'>de17c6b ↗</a></td></tr><tr><td><b>workbench/view-decoded-results-20260813</b></td><td>工作台实验分支：测试场</td><td></td><td><a href='https://github.com/xf8410/uma-mobile-decision-pipeline/tree/workbench/view-decoded-results-20260813' target='_blank' rel='noopener noreferrer'>9c10bb7 ↗</a></td></tr>
+</table></div>
+<footer>花落仓库语义手册 · 生成于 2026-09-13 · 全部页面互相跳转，直接存放在 GitHub 仓库内，免积分查看。<br>
+维护方法：改 <code>semantic_atlas/gen_atlas.py</code> 里的文字，重新运行生成，推送到 repo-atlas 仓库。</footer>
+</div></body></html>
