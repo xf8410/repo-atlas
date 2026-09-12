@@ -64,12 +64,12 @@ br-table{display:block;overflow-x:auto}
 <p>我们的 bench（测试场）目前基准线：A 组平均分 <b>64271</b>。</p>
 </div>
 
-<h2>三个容易搞混的数字（口径陷阱）</h2>
+<h2>三个容易搞混的数字（口径陷阱，2026-09-13 打捞已澄清）</h2>
 <table>
 <tr><th>数字</th><th>什么口径</th><th>在哪</th></tr>
-<tr><td><b>~64271</b></td><td>bench REC 直跑（不做搜索，直接按策略跑），种子 61444，每臂 10 局</td><td>umaai-rs-fanfix 的 CI</td></tr>
-<tr><td><b>66734.8</b></td><td>EXP-009b 冠军（神经网络迭代出来的最优模型，<span class="warn">未经换种子复验</span>）</td><td>uma-ramen-nn-lab</td></tr>
-<tr><td><b>72000 / 76000</b></td><td>神经网络深度迭代的最好成绩，口径不明（可能是完整 MCTS 或不同 build）</td><td>在暮雪流年的电脑里，<span class="bad">拿不到</span></td></tr>
+<tr><td><b>64271.5</b></td><td>手写 REC 直跑 200 局均分（现在的活基线，随时可复现）</td><td>fanfix 仓库 CI</td></tr>
+<tr><td><b>70495.9</b></td><td>神经网络 EXP-014，4200 局同种子配对均分（<b>历史最高均分</b>，三种子 70362/70496/70335）</td><td>uma-ramen-teacher-lab，配置已从 CI 完整还原</td></tr>
+<tr><td><b>72000 / 76000</b></td><td><b>单局分数</b>的密集区间（不是均分！）：nn014 每 4200 局约有 1300 局超 72000、约 50 局超 76000；单局历史最高 <b>79187</b></td><td>CSV 逐局可查（CI 全量打捞确认）</td></tr>
 </table>
 <div class="callout danger"><b>铁律：不同口径的分数不能互相比。</b>就像米和尺，数字不同不代表东西变了。讨论"提升"之前，先问"同一把尺吗"。</div>
 
