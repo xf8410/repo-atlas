@@ -40,7 +40,7 @@ br-table{display:block;overflow-x:auto}
 <div class="nav"><b>语义手册</b> <a href="index.html"">🏠 总入口</a> <a href="ch/player.html">👤 玩家语义</a> <a href="ch/game.html">🎮 游戏语义</a> <a href="ch/code.html">🛠️ 代码维护语义</a> <a href="ch/fix.html">🩹 修复语义</a> <a href="ch/compat.html">🔗 兼容性语义</a> <a href="ch/bugfix.html">🐛 修 Bug 维护语义</a> <a href="ch/pr.html">📬 PR 语义</a> <a href="ch/glossary.html">📖 术语白话对照表</a> <a href="index.html"#repos">📦 仓库地图</a></div>
 <div class="wrap">
 <h1>🏠 花落仓库语义手册</h1>
-<p style="color:var(--sub)">这是全部 38 个仓库、约 600 个分支的大白话说明书。<b>不写术语，只讲语义</b>——第一次玩赛马娘、第一次看代码的人也能读懂。</p>
+<p style="color:var(--sub)">这是全部 38 个仓库、534 个分支的大白话说明书。<b>不写术语，只讲语义</b>——第一次玩赛马娘、第一次看代码的人也能读懂。</p>
 
 <div class="callout info"><b>怎么用这本手册：</b>① 先读下面前两个语义章节（玩家/游戏），搞懂游戏在玩什么；② 要改代码就读「代码维护语义」；③ 修 bug / 提 PR 前先读对应章节——里面记着踩过的坑（包括 2798 个文件丢失的教训）。每个仓库点卡片进去，能看到每个分支是干嘛的。</div>
 
@@ -59,7 +59,7 @@ br-table{display:block;overflow-x:auto}
 <h2>🐴 赛马娘 AI 核心（这次修的就是这条线）</h2><div class="grid"><div class="repo-card"><div class="name"><a href="repos/umaai-rs.html">umaai-rs</a></div>
 <div class="desc">主仓库（Rust 重写的育成 AI）。所有实验的老家，上游是 xulai1001 的原版。MCTS 搜索、评分、策略都在这里。</div>
 <span class="tag">37 个分支</span><span class="tag">33MB</span><span class="tag"><a href="https://github.com/xf8410/umaai-rs" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/umaai-rs-fanfix.html">umaai-rs-fanfix</a></div>
-<div class="desc">本次修复实验仓。『拉面杯溢出/松弛修复』的主战场：补丁（patches/）、九臂 A/B 测试（bench）、判词（docs/）都在这。本手册就住在这个仓库里。</div>
+<div class="desc">本次修复实验仓。『拉面杯溢出/松弛修复』的主战场：补丁（patches/）、九臂 A/B 测试（bench）、判词（docs/）都在这。语义手册住在专门的 repo-atlas 仓库（总入口有链接）。</div>
 <span class="tag hot">7 个分支</span><span class="tag">2MB</span><span class="tag"><a href="https://github.com/xf8410/umaai-rs-fanfix" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/umaai-rs-fanskip.html">umaai-rs-fanskip</a></div>
 <div class="desc">粉丝数跳过版：真机 AI 可以配置跳过『粉丝数达标』判定。注意：主人最新判断是粉丝数可能根本不用管（每个马娘都有必打的育成目标赛），待实测。</div>
 <span class="tag">1 个分支</span><span class="tag">33MB</span><span class="tag"><a href="https://github.com/xf8410/umaai-rs-fanskip" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div><div class="repo-card"><div class="name"><a href="repos/uma-ramen-nn-lab.html">uma-ramen-nn-lab</a></div>
