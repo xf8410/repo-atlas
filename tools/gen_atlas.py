@@ -84,8 +84,8 @@ CHAPTERS = [
 def esc(s): return html.escape(str(s))
 
 CSS = """
-:root{--bg:#0f1419;--card:#1a2129;--card2:#212a35;--line:#2d3743;--txt:#e6e9ed;--sub:#9aa7b4;
---acc:#5eb1ff;--acc2:#ffd166;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--hold:#a78bfa}
+:root{--bg:#f6f8fa;--card:#ffffff;--card2:#eef2f7;--line:#d9dfe7;--txt:#1f2937;--sub:#5c6b7a;
+--acc:#0b6bcb;--acc2:#b45309;--ok:#15803d;--bad:#b91c1c;--warn:#a16207;--hold:#7c3aed}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;font-size:16px}
 .wrap{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
@@ -93,7 +93,7 @@ a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
 h1{font-size:1.9em;margin:12px 0 6px}h2{font-size:1.35em;margin:34px 0 12px;border-left:4px solid var(--acc);padding-left:10px}
 h3{font-size:1.12em;margin:22px 0 8px;color:var(--acc2)}
 p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
-.nav{position:sticky;top:0;z-index:9;background:rgba(15,20,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
+.nav{position:sticky;top:0;z-index:9;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92em}
 .nav b{color:var(--acc2)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
@@ -106,7 +106,7 @@ p{margin:8px 0}ul,ol{margin:8px 0 8px 24px}li{margin:5px 0}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93em}
 th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
 th{background:var(--card2)}
-tr:nth-child(even){background:rgba(255,255,255,.02)}
+tr:nth-child(even){background:rgba(15,23,42,.03)}
 .ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.hold{color:var(--hold)}
 .callout{border-left:4px solid var(--warn);background:rgba(251,191,36,.07);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
 .callout.danger{border-color:var(--bad);background:rgba(248,113,113,.07)}
@@ -125,7 +125,7 @@ def head(title, crumbs=''):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} · 花落仓库语义手册</title>
 <style>{CSS}</style></head><body>
-<div class="nav"><b>语义手册</b> <a href="../index.html">🏠 总入口</a> {' '.join(f'<a href="ch/{c}.html">{t}</a>' for c, t, _ in CHAPTERS)} <a href="../index.html#repos">📦 仓库地图</a></div>
+<div class="nav"><b>语义手册</b> <a href="{BASE}/index.html">🏠 总入口</a> {' '.join(f'<a href="{BASE}/ch/{c}.html">{t}</a>' for c, t, _ in CHAPTERS)} <a href="{BASE}/index.html#repos">📦 仓库地图</a></div>
 <div class="wrap">{crumbs}"""
 
 FOOT = f"""<footer>花落仓库语义手册 · 生成于 {TODAY} · 全部页面互相跳转，直接存放在 GitHub 仓库内，免积分查看。<br>
